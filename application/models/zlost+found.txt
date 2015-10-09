@@ -1,0 +1,18 @@
+<?php 
+
+        /* Non-Query builder Method*/
+        /*
+        $query = $this->db->query("
+            SELECT * FROM `db_song_x_album` as sxa
+            join db_song as s on sxa.song_id = s.song_id 
+            where sxa.album_id = $albumId");
+        $data['songList'] = $query->result_array();
+        */
+
+
+
+
+
+
+
+ ?>
