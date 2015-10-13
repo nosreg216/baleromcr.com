@@ -7,7 +7,7 @@ class Order_model extends CI_Model {
             return $query->row(); 
 		}
 
-        public function create()
+        public function create($email)
         {   
             /* Default order ID (First Order) */
             $lastId = 1024;
@@ -26,6 +26,7 @@ class Order_model extends CI_Model {
             
             /* Define a new ID */
             $data['order_id'] = $lastId;
+            $data['order_email'] = $email;
             $data['order_token'] = md5($lastId);
 
             /* Perform the actual insert */

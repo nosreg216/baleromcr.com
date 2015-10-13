@@ -9,8 +9,8 @@ class Display extends CI_Controller {
 		$data['title'] = "BaleromCR | Tienda";
 
 		/*Load the view files*/
-		$this->load->view('static/header', $data);
-		$this->load->view('home/home', $data);
-		$this->load->view('static/footer', $data);
+		$this->load->view('header', $data);
+		$this->load->view('index', $data);
+		$this->load->view('footer');
 	}
 }

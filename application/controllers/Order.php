@@ -9,7 +9,12 @@ class Order extends CI_Controller {
         Creates a new Order with the CI Cart data
         @returns: ID of the new Order.
         */
-        $orderId = $this->create();
+        $email = $this->input->post('email');
+        $orderId = $this->create($email);
+
+        if ($orderId === -1 ) {
+        	header("Location: cart");
+        }
 
         /* Hash number to identify the order */
         $token = md5($orderId);
@@ -25,8 +30,6 @@ class Order extends CI_Controller {
 		'shipping' => 0,		                							//Shipping Cost
 		'custom'   => ''                           							//Custom attribute
 		);
-		
-		var_dump($settings['cancelurl']);
 
 		/* Initialize Paypal Instance */
 		$pp = new Paypal($settings);
@@ -52,36 +55,48 @@ class Order extends CI_Controller {
 
 		/* Load the view files */
 		$data['title'] = 'Finalizar la Compra';
-		$this->load->view('static/header', $data);
+		$this->load->view('header', $data);
 		$this->load->view('order_review', $data);
-		$this->load->view('static/footer');
+		$this->load->view('footer');
 	}
 
 
 
-	public function create()
+	public function create($email)
 	{
 		/*Loads the Order data model */
 		$this->load->model('order_model');
 
-		/* Create a new order and returns its ID */
-		$orderId = $this->order_model->create();
+		if ($this->cart->total_items() > 0) {
+			/* Create a new order and returns its ID */
+			$orderId = $this->order_model->create($email);
 
-		/* Reads the Shopping Cart and adds its items to the order */
-        foreach ($this->cart->contents() as $item){
-        	$this->order_model->add_item($orderId, $item);
-        }
-
-        return $orderId;
+			/* Reads the Shopping Cart and adds its items to the order */
+	        foreach ($this->cart->contents() as $item){
+	        	$this->order_model->add_item($orderId, $item);
+	        }
+	        return $orderId;
+		} else {
+			/* Generic Error Code */
+			return -1;
+		}
 	}
 
-	public function update($token = null)
+
+	/* Update the order status to 'complete' */
+	public function complete($token = null)
 	{
 		/*Loads the Order data model */
 		$this->load->model('order_model');
 
 		/* Sets the order as complete */
 		$this->order_model->update($token);
+
+		/* Prepares the email to be sent*/
+
+		$email = 'nosreg216@outlook.com';
+
+		email_notify();
 
 	}
 
@@ -94,4 +109,22 @@ class Order extends CI_Controller {
 		$this->order_model->delete($token);
 
 	}
+
+	public function email_notify($email, $message = "Testing")
+	{
+		$this->load->library('email');
+
+		$this->email->from('nosreg216@gmail.com', 'Gerson Rodriguez');
+		$this->email->to($email);
+		$this->email->subject('Comprobante de Compra | Baleromcr.com');
+		$this->email->message($message);
+		$this->email->send();
+	}
+
+
+	public function display($orderToken)
+	{
+		
+	}
+
 }

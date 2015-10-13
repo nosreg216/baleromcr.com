@@ -4,39 +4,27 @@
 </head>
 <body>
 
-<?php 
-
-echo md5("hola");
-
-
- ?>
-
-
-
-<?php 
-        
-                $this->load->helper(array('form', 'url'));
-
-                $this->load->library('form_validation');
+<?php
+/**
+ * We just want to hash our password using the current DEFAULT algorithm.
+ * This is presently BCRYPT, and will produce a 60 character result.
+ *
+ * Beware that DEFAULT may change over time, so you would want to prepare
+ * By allowing your storage to expand past 60 characters (255 would be good)
+ */
+echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 ?>
+<br>
+<?php
+// See the password_hash() example to see where this came from.
+$hash = '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq';
 
-<?php echo form_open('form'); ?>
-
-<h5>Username</h5>
-<input type="text" name="username" value="" size="50" />
-
-<h5>Password</h5>
-<input type="text" name="password" value="" size="50" />
-
-<h5>Password Confirm</h5>
-<input type="text" name="passconf" value="" size="50" />
-
-<h5>Email Address</h5>
-<input type="text" name="email" value="" size="50" />
-
-<div><input type="submit" value="Submit" /></div>
-
-</form>
+if (password_verify('rasmuslerdorf', $hash)) {
+    echo 'Password is valid!';
+} else {
+    echo 'Invalid password.';
+}
+?>
 
 </body>
 </html>

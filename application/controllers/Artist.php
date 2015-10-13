@@ -27,9 +27,9 @@ class Artist extends CI_Controller {
 		$data['albumList'] = $albumList;
 		
 		/* Load the view files */
-		$this->load->view('static/header', $data);
-		$this->load->view('artist/index', $data);
-		$this->load->view('static/footer');
+		$this->load->view('header', $data);
+		$this->load->view('artist_view', $data);
+		$this->load->view('footer');
 
 	}
 }

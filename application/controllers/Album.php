@@ -35,11 +35,11 @@ class Album extends CI_Controller {
 		$data['albumArtist'] = $albumArtist;
 
 		/* Load the view files */
-		$this->load->view('static/header', $data);
-		$this->load->view('album/album', $data);
+		$this->load->view('header', $data);
+		$this->load->view('album_view', $data);
 /*################################################################################*/
-    	$this->load->view('album/related', $data);
+    	$this->load->view('related', $data);
 /*################################################################################*/
-		$this->load->view('static/footer');
+		$this->load->view('footer');
 	}
 }

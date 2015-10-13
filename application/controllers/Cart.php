@@ -8,9 +8,9 @@ class Cart extends CI_Controller {
 
 		// Load the view files
 		$data['title'] = 'Carrito de Compra';
-		$this->load->view('static/header', $data);
-		$this->load->view('cart/index', $data);
-		$this->load->view('static/footer');
+		$this->load->view('header', $data);
+		$this->load->view('cart_view', $data);
+		$this->load->view('footer');
 	}
 
 	public function add_single($songId){

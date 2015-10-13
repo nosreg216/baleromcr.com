@@ -19,7 +19,7 @@ class Album_model extends CI_Model {
     public function add($items = null)
     {    
         /* Default ID (First) */
-        $lastId = 1024;
+        $lastId = 4096;
 
         /* Get the ID of the previous album */
         $this->db->limit(1);
