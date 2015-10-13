@@ -7,6 +7,32 @@ class Order_model extends CI_Model {
             return $query->row(); 
 		}
 
+        /*
+        @description: Get the list of items the Order.
+        @param: Order Token (public ID)
+        @return: Array of Objects (order_Item stClass).
+        */
+        public function requestItemList( $orderID )
+        {   
+            /* Get the item list */
+
+            $query = $this->db->get_where('db_order_item', array('order_id' => $orderID));
+            return $itemList =  $query->result();
+        } 
+
+        /*
+        @description: Get the ID of the  Order.
+        @param: Order Token (public ID)
+        @return: Order ID number (Integer).
+        */
+        public function getRealID( $orderToken )
+        {   
+            /* Get the ID of the Order. */
+            $query = $this->db->get_where('db_order', array('order_token' => $orderToken));
+            $order = $query->row();
+            return $order->order_id;
+        }
+
         public function create($email)
         {   
             /* Default order ID (First Order) */

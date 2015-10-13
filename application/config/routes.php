@@ -32,9 +32,10 @@ $route['cart/delete/(:any)'] = 'Cart/delete/$1';
 $route['checkout'] = 'Order/checkout';
 $route['order/update/(:any)'] = 'Order/update/$1';
 $route['order/cancel/(:any)'] = 'Order/update/$1';
+$route['order/(:any)'] = 'Order/display/$1';
 
-/* Order */
-$route['order/review/(:any)'] = 'Order/display/$1';
+/* Download */
+$route['order/download'] = 'Order/download';
 
 /*Debugging*/
 $route['test'] = 'Test';

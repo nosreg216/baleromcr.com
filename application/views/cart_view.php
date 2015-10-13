@@ -26,10 +26,11 @@
 
                 $type = 'Desconocido';
                 switch ($items['type']) {
-                  case '1': $type = "Sencillo"; break;
-                  case '2': $type = "Album"; break;
-                  case '4': $type = "Paquete"; break;
-                  case '3': $type = "Video"; break;
+                  case '1': $type = "Album"; break;
+                  case '2': $type = "Cancion de Album"; break;
+                  case '3': $type = "Sencillo"; break;
+                  case '4': $type = "Video"; break;
+                  case '5': $type = "Paquete"; break;
                 }
                 echo "<tr>";
                 echo "<td>". $i."</td>";

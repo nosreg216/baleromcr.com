@@ -124,7 +124,53 @@ class Order extends CI_Controller {
 
 	public function display($orderToken)
 	{
-		
-	}
 
+		$this->load->model('order_model');
+		$this->load->model('album_model');
+		$this->load->model('song_model');
+
+		$orderID = $this->order_model->getRealID($orderToken);
+		/* This list does not have the item names */
+		$itemList = $this->order_model->requestItemList($orderID);
+
+
+        foreach ($itemList as $item) {
+            switch ($item->item_type) {
+              case '1':
+              	$info = $this->album_model->getAlbumById($item->item_id);
+              	$item->item_name = $info->album_title;
+              	break;
+              case '2':
+              	$info = $this->album_model->getAlbumById($item->item_id);
+              	$item->item_name = $info->album_title;
+              	break;
+            }
+        }
+
+		/*Set the data for the view*/
+		$data['title'] = "Order de compra #$orderID";
+		$data['itemList'] = $itemList;
+		
+		/*Load the view files*/
+		$this->load->view('header', $data);
+		$this->load->view('order_display', $data);
+		$this->load->view('footer');
+	}
+	
+	public function download()
+	{
+		$this->load->model('download_model');
+
+		$itemType = $this->input->post('item_type');
+		$itemId = $this->input->post('item_id');
+		$orderId = $this->input->post('order_id');
+
+		switch ($itemType) {
+			case 1: $this->download_model->zip_album($itemId);
+			case 2: $this->download_model->zip_track($itemId);
+			case 3: $this->download_model->zip_song($itemId);
+			case 4: $this->download_model->zip_video($itemId);
+			case 5: $this->download_model->zip_bundle($itemId);
+		}
+	}
 }

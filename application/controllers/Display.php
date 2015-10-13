@@ -13,4 +13,5 @@ class Display extends CI_Controller {
 		$this->load->view('index', $data);
 		$this->load->view('footer');
 	}
+
 }
