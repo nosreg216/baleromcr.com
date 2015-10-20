@@ -61,12 +61,11 @@
 
 			echo div_open('list-group');
 			foreach ($albumSongList as $song) {
-				$id = $song->album_id;
-				$title = $song->song_title;
-				$year = $song->song_year;
+				$id = $song->track_id;
+				$title = $song->track_title;
 				$url = base_url()."album/$id/" . strToUrl($title);
 				echo a_open('list-group-item',$url);
-				echo "$title ($year)";
+				echo $title;
 				echo a_close();
 			}
 			echo div_close();

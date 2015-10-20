@@ -60,8 +60,6 @@ class Order extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-
-
 	public function create($email)
 	{
 		/*Loads the Order data model */
@@ -82,22 +80,26 @@ class Order extends CI_Controller {
 		}
 	}
 
-
 	/* Update the order status to 'complete' */
 	public function complete($token = null)
 	{
 		/*Loads the Order data model */
 		$this->load->model('order_model');
 
+		/* Get the Order ID for further references */
+		$orderId = $this->order_model->getRealID($token);
+
 		/* Sets the order as complete */
-		$this->order_model->update($token);
+        $data = array('order_status' => 1);
+		$this->order_model->update($orderId, $data);
+
+		/* Get the Order Information to prepare the Email */
+		$orderInfo = $this->order_model->request($orderId);
 
 		/* Prepares the email to be sent*/
+		//$this->email_notify($orderInfo->order_email);
 
-		$email = 'nosreg216@outlook.com';
-
-		email_notify();
-
+		header("Location: " . base_url() . "order/$token");
 	}
 
 	public function cancel($token = null)
@@ -110,15 +112,20 @@ class Order extends CI_Controller {
 
 	}
 
-	public function email_notify($email, $message = "Testing")
+	public function email_notify($email = 'nosreg216@outlook.com')
 	{
 		$this->load->library('email');
 
 		$this->email->from('nosreg216@gmail.com', 'Gerson Rodriguez');
 		$this->email->to($email);
 		$this->email->subject('Comprobante de Compra | Baleromcr.com');
-		$this->email->message($message);
-		$this->email->send();
+		$this->email->message('Mensaje');
+		
+		if ($this->email->send()) {
+			echo 'Sent.';
+		} else {
+			echo $this->email->print_debugger();
+		}
 	}
 
 
@@ -130,10 +137,11 @@ class Order extends CI_Controller {
 		$this->load->model('song_model');
 
 		$orderID = $this->order_model->getRealID($orderToken);
-		/* This list does not have the item names */
+		
+		/* This list does not have the item names yet */
 		$itemList = $this->order_model->requestItemList($orderID);
 
-
+		/* Set the titles of the items for display */
         foreach ($itemList as $item) {
             switch ($item->item_type) {
               case '1':
@@ -141,14 +149,27 @@ class Order extends CI_Controller {
               	$item->item_name = $info->album_title;
               	break;
               case '2':
-              	$info = $this->album_model->getAlbumById($item->item_id);
-              	$item->item_name = $info->album_title;
+              	$info = $this->album_model->getTrackById($item->item_id);
+              	$item->item_name = $info->track_title;
+              	break;
+              case '3':
+              	$info = $this->song_model->getSongById($item->item_id);
+              	$item->item_name = $info->song_title;
+              	break;
+              case '4':
+              	$info = $this->album_model->getVideoById($item->item_id);
+              	$item->item_name = $info->video_title;
+              	break;
+              case '5':
+              	$info = $this->album_model->getBundleById($item->item_id);
+              	$item->item_name = $info->bundle_title;
               	break;
             }
         }
 
 		/*Set the data for the view*/
 		$data['title'] = "Order de compra #$orderID";
+		$data['order_token'] = $orderToken;
 		$data['itemList'] = $itemList;
 		
 		/*Load the view files*/
@@ -165,12 +186,26 @@ class Order extends CI_Controller {
 		$itemId = $this->input->post('item_id');
 		$orderId = $this->input->post('order_id');
 
-		switch ($itemType) {
-			case 1: $this->download_model->zip_album($itemId);
-			case 2: $this->download_model->zip_track($itemId);
-			case 3: $this->download_model->zip_song($itemId);
-			case 4: $this->download_model->zip_video($itemId);
-			case 5: $this->download_model->zip_bundle($itemId);
+		$downloaded = $this->download_model->validate($itemType, $itemId, $orderId);
+
+		if ($downloaded < ITEM_MAX_DOWNLOADS) {
+
+			/* Increase the download counter +1 */
+        	$this->download_model->register_download($itemType, $itemId, $orderId, $downloaded);
+
+			/* Call the apropiate zip method */
+			switch ($itemType) {
+				case 1: $this->download_model->zip_album($itemId);	break;
+				case 2: $this->download_model->zip_track($itemId);	break;
+				case 3: $this->download_model->zip_song($itemId);	break;
+				case 4: $this->download_model->zip_video($itemId);	break;
+				case 5: $this->download_model->zip_bundle($itemId);	break;
+			}
+			
+		} else {
+			$token = $this->input->post('order_token');
+			header("Location: " . base_url() . "order/$token");
 		}
 	}
 }
+

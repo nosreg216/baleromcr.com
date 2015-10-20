@@ -1,6 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+/*
+|--------------------------------------------------------------------------
+| Custom Parameters (Can be modified)
+|--------------------------------------------------------------------------
+*/
+
+define('ITEM_MAX_DOWNLOADS', 5); // Times an item can be downloaded after purchase.
+define('ORDER_VIGENCY_PERIOD', 30); // Days a order is available for download after purchase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================== Don't Modify ==============================*/
 /*
 |--------------------------------------------------------------------------
 | File and Directory Modes

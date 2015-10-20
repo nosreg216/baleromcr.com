@@ -71,12 +71,16 @@ class Order_model extends CI_Model {
             return $this->db->insert('db_order_item', $data);
         }
 
-        public function update($token = null)
+        public function update($orderId, $data)
         {
-            /* Update the order status to 'complete' */
-            $data = array('order_status' => 1);
-            $this->db->where('order_token', $token);
+            $this->db->where('order_id', $orderId);
             $this->db->update('db_order', $data);
+        }
+
+        public function update_item($orderId, $data)
+        {
+            $this->db->where('order_id', $orderId);
+            $this->db->update('db_order_item', $data);
         }
 
         public function delete($token = null)

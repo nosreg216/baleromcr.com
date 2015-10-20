@@ -1,14 +1,7 @@
 <?php 
 
 /* Define global variables*/
-
-/*Artist*/
-$artistId = $artistInfo->artist_id;
-$artistName = $artistInfo->artist_name;
-
-/*Song*/
 $songId = $songInfo->song_id;
-
 $title = $songInfo->song_title;
 $year = $songInfo->song_year;
 $price = $songInfo->song_price;
@@ -17,7 +10,7 @@ $price = $songInfo->song_price;
 
 <ol class="breadcrumb">
   <li><a href="<?php echo base_url();?>">Inicio</a></li>
-  <li><a href="<?php echo base_url()."artist/$artistId";?>"><?php echo $artistName;?></a></li>
+  <li><a href="<?php echo base_url()."balerom/";?>">Sencillos</a></li>
   <li class="active"><?php echo $title; ?></li>
 </ol>
 <!-- Page Content -->
@@ -42,7 +35,7 @@ $price = $songInfo->song_price;
     <div class="row">
         <div class="col-md-6">
             <img class="img-responsive"
-            src="<?php echo base_url()."data/music/balerom/singles/$songId/cover.png";?>" alt="404">
+            src="<?php echo base_url()."data/music/balerom/songs/$songId/cover.png";?>" alt="404">
         </div>
     </div>
     <!-- /.row -->

@@ -1,7 +1,9 @@
 <div class="container-fluid">
 	<!-- Main Slider -->
 	<div class="row">
-		<?php $this->load->view('hero-slider'); ?>
+		<div class="col-sm-12">
+			<a href="albums">Todo el contenido</a>
+		</div>
 	</div>
 
 	<!-- Featured Albums Carousel + Promotions block -->

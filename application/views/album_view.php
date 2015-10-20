@@ -2,10 +2,6 @@
 
 /* Define global variables*/
 
-/*Artist*/
-$artistId = $albumArtist->artist_id;
-$artistName = $albumArtist->artist_name;
-
 /*Album*/
 $albumId = $albumInfo->album_id;
 $title = $albumInfo->album_title;
@@ -16,7 +12,7 @@ $price = $albumInfo->album_price;
 
 <ol class="breadcrumb">
   <li><a href="<?php echo base_url();?>">Inicio</a></li>
-  <li><a href="<?php echo base_url()."balerom/";?>"><?php echo $artistName;?></a></li>
+  <li><a href="<?php echo base_url()."balerom/";?>">Albums</a></li>
   <li class="active"><?php echo $title; ?></li>
 </ol>
 
@@ -45,15 +41,14 @@ $price = $albumInfo->album_price;
         <div class="col-md-6">
             <div class="list-group">
             <?php 
-            $number = 1;
             foreach ($songList as $song) {
-                $title = $song->song_title;
-                $price = $song->song_price;
-                echo a_open("list-group-item", "#");
-                echo "<span class='badge '>Agregar $$price</span>";
-                echo $number ." - $title";
+                $title = $song->track_title;
+                $trackId = $song->track_id;
+
+                echo a_open("list-group-item", base_url() . "cart/add/track/$trackId");
+                echo "<span class='badge'>Agregar</span>";
+                echo $title;
                 echo a_close();
-                $number++;
             }
              ?>
             </div>

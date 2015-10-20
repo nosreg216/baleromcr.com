@@ -8,6 +8,20 @@ class Album_model extends CI_Model {
         return $albumInfo = $query->row(); 
 	}
 
+    /* Get the album list from the database */
+    public function getAlbumList(){
+        $this->db->order_by('album_year DESC');
+        $query = $this->db->get('db_album');
+        return $query->result_array();
+    }
+
+    /* Get the album information from the database */
+    public function getTrackById($trackId = 0)
+    {   
+        $query = $this->db->get_where('db_album_track', array('track_id' => $trackId));
+        return $query->row(); 
+    }
+
     /* Get the song list from the database */
     public function getSongListById($albumId){
         $this->db->from('db_album_track');
