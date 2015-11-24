@@ -15,34 +15,34 @@
       <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner"><h3>15</h3><p>Albums</p></div>
-            <div class="icon"><i class="ion ion-disc"></i></div>
-            <a href="#" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div><!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
           <div class="small-box bg-green">
-            <div class="inner"><h3>7</h3><p>Sencillos</p></div>
-            <div class="icon"><i class="ion ion-music-note"></i></div>
-            <a href="#" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
+            <div class="inner"><h3><?php echo $albumCount; ?></h3><p>Albums</p></div>
+            <div class="icon"><i class="ion ion-disc"></i></div>
+            <a href="<?php echo base_url();?>admin/albums" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner"><h3>4</h3><p>Videos</p></div>
-            <div class="icon"><i class="ion ion-film-marker"></i></div>
-            <a href="#" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
+          <div class="small-box bg-aqua">
+            <div class="inner"><h3><?php echo $songCount; ?></h3><p>Sencillos</p></div>
+            <div class="icon"><i class="ion ion-music-note"></i></div>
+            <a href="<?php echo base_url();?>admin/singles" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div><!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-red">
-            <div class="inner"><h3>15</h3><p>Paquetes</p></div>
+            <div class="inner"><h3><?php echo $videoCount; ?></h3><p>Videos</p></div>
+            <div class="icon"><i class="ion ion-film-marker"></i></div>
+            <a href="<?php echo base_url();?>admin/videos" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div><!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner"><h3><?php echo $bundleCount; ?></h3><p>Paquetes</p></div>
             <div class="icon"><i class="ion ion-bag"></i></div>
-            <a href="#" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url();?>admin/bundles" class="small-box-footer">Gestionar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div><!-- ./col -->
       </div><!-- /.row -->

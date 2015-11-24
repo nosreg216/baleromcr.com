@@ -123,5 +123,11 @@ class Download_model extends CI_Model {
         return $this->db->update('db_order_item', $data);
     }
 
+    public function countDownloads($range)
+    {
+        $this->db->select_sum('downloaded', 'total');
+        $query = $this->db->get('db_order_item'); 
+    }
+
 
 }

@@ -18,5 +18,10 @@ class Song_model extends CI_Model {
     {
         $this->db->delete('', array('' => $id));
     }
+    public function getCount()
+    {
+        return $this->db->count_all_results('db_song');
+    }
 }
-?>
+
+

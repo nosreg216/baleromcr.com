@@ -20,6 +20,5 @@ class Song extends CI_Controller {
 		$this->load->view('static/header', $data);
 		$this->load->view('song/song_view', $data);
 		$this->load->view('static/footer');
-
 	}
 }

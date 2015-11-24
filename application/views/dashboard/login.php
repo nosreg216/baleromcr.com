@@ -15,6 +15,16 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/dashboard/css/AdminLTE.min.css">
 
+    
+    <style type="text/css">
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+
+
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +52,7 @@
         <!-- lockscreen credentials (contains the form) -->
         <form class="lockscreen-credentials" action="<?php echo base_url();?>admin/login" method="POST">
           <div class="input-group">
-            <input type="password" class="form-control" placeholder="contraseña">
+            <input type="password" class="form-control" name="password" placeholder="contraseña" required>
             <div class="input-group-btn">
               <button class="btn"><i class="fa fa-arrow-right text-muted"></i></button>
             </div>
@@ -57,6 +67,29 @@
         Copyright &copy; 2015 <b><a href="http://baleromcr.com" class="text-black">BaleromCR</a></b><br>
         All rights reserved
       </div>
+    
     </div><!-- /.center -->
+    <?php echo br(5); ?>
+    <div class="container">
+      <div id="alert" class="row hidden">
+        <div class="col-md-4 col-md-offset-4">
+             <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h4><i class="icon fa fa-ban"></i> Error.</h4>
+              Contraseña inválida.
+            </div>
+        </div>
+      </div>
+    </div>
+
   </body>
+
+  <script type="text/javascript">
+      var url = window.location + "";
+      if (url.search('=err') >= 0) {
+        var dom = document.getElementById('alert');
+        dom.className = "row";
+      }
+  </script>
+
 </html>

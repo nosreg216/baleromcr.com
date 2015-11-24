@@ -1,5 +1,5 @@
 <?php
-class Video_model extends CI_Model {
+class Bundle_model extends CI_Model {
 
     /* Get the video information from the database */
 	public function getVideoById($videoId = 0)
@@ -18,10 +18,10 @@ class Video_model extends CI_Model {
     {
         $this->db->delete('', array('' => $id));
     }
-    
+
     public function getCount()
     {
-        return $this->db->count_all_results('db_video');
+        return $this->db->count_all_results('db_bundle');
     }
 }
 

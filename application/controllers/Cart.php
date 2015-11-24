@@ -131,7 +131,4 @@ class Cart extends CI_Controller {
 		$this->cart->destroy();
 		header("Location: " . base_url() . "cart");
 	}
-
-
-
 }

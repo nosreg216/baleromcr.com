@@ -30,6 +30,11 @@ class Album_model extends CI_Model {
         return $query->result();
     }
 
+    public function getCount()
+    {
+        return $this->db->count_all_results('db_album');
+    }
+
     public function add($items = null)
     {    
         /* Default ID (First) */

@@ -16,7 +16,7 @@
       <!-- left column -->
       <div class="col-md-6">
         <!-- general form elements -->
-        <div class="box box-danger">
+        <div class="box box-success">
 
           <div class="box-header with-border">
             <h3 class="box-title">Agregar album</h3>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-xs-9">
                   <div class="form-group">
-                    <label for="file_song">Archivo (.mp4)</label>
+                    <label for="file_song">Lista de Canciones (.txt)</label>
                     <input type="file" name="file_song" required>
                   </div>
                 </div>
@@ -79,7 +79,7 @@
 
       <!-- right column -->
       <div class="col-xs-6">
-        <div class="box box-danger">
+        <div class="box box-success">
           <div class="box-header">
             <h3 class="box-title">Todos los Albums</h3>
           </div><!-- /.box-header -->
@@ -89,28 +89,23 @@
               <tr>
                 <th>Titulo</th>
                 <th>Año</th>
-                <th>Eliminar</th>
+                <th>Opciones</th>
               </tr>
-              <tr>
-                <td>John Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Alexander Pierce</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Bob Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Mike Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
+              <?php 
+                foreach ($albumList as $album) {
+
+                  $id = $album['album_id'];
+                  $title = $album['album_title'];
+                  $year = $album['album_year'];
+                  $link = base_url() . "admin/albums/edit/$id";
+
+                  echo "<tr>";
+                  echo "<td>$title</td>";
+                  echo "<td>$year</td>";
+                  echo "<td><a href='$link' class='btn btn-xs btn-warning'>Editar</a></td>";
+                  echo "</tr>";
+                }
+              ?>
             </table>
           </div><!-- /.box-body -->
           <div class="box-footer">
