@@ -95,6 +95,8 @@ class Cart extends CI_Controller {
 		    'name'    => $songInfo->song_title,
 		    'type'    => '3'
 		);
+		
+		
 		$this->cart->insert($data);
 		//header("Location: " . base_url() . "song/$song_id?ac=1");
 		//header("Location: " . base_url() . "cart");

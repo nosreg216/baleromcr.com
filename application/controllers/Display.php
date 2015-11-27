@@ -10,7 +10,13 @@ class Display extends CI_Controller {
     }
 
 	public function page($page = 'index'){
-		
+	
+		/* Load Data Models */		
+		$this->load->model('album_model');
+
+		/* Get all content Lists */
+		$data['albumList'] = $this->album_model->getAlbumList();
+
 		/*Set the data for the view*/
 		$data['title'] = "BaleromCR | Tienda";
 

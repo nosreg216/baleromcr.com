@@ -1,0 +1,1223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f",
+				"fun	function …"
+			],
+			[
+				"fun",
+				"function_exists"
+			],
+			[
+				"al",
+				"albumList"
+			],
+			[
+				"ec",
+				"echo	echo \"…\""
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"o",
+				"order_token"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"alb",
+				"albumItem"
+			],
+			[
+				"video",
+				"video_id"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"s",
+				"switch	switch …"
+			],
+			[
+				"dow",
+				"download_model"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"emai",
+				"email"
+			],
+			[
+				"fu",
+				"fun	function …"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"Ra",
+				"Raleway-Bold"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"or",
+				"orderId"
+			],
+			[
+				"e",
+				"echo"
+			],
+			[
+				"t",
+				"token"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"a",
+				"array	$… = array (…)"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"border-ra",
+				"border-top-right-radius"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"es",
+				"español"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bore",
+				"border-color"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"div",
+				"div_open"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"bA",
+				"background-color"
+			],
+			[
+				"artist",
+				"artist_id"
+			],
+			[
+				"art",
+				"artistName"
+			],
+			[
+				"str_",
+				"str_replace"
+			],
+			[
+				"album",
+				"albumId"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"background-o",
+				"background-color"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"background-r",
+				"background-origin"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"slide",
+				"slidesToShow"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"bode",
+				"border-radius"
+			],
+			[
+				"im",
+				"imgURL"
+			],
+			[
+				"bar",
+				"background-origin"
+			],
+			[
+				"bag",
+				"background-color"
+			],
+			[
+				"d",
+				"dc373f"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"borde",
+				"border-style"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"on",
+				"outline"
+			],
+			[
+				"backgrou",
+				"background-size"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			],
+			[
+				"lang",
+				"language"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"Messa",
+				"Mensasge"
+			],
+			[
+				"Sub",
+				"subject"
+			],
+			[
+				"ener",
+				"energy"
+			],
+			[
+				"Conta",
+				"Contacto"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"hed",
+				"header"
+			],
+			[
+				"con",
+				"content3"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ema",
+				"login-email"
+			],
+			[
+				"ref",
+				"ref_i"
+			],
+			[
+				"index",
+				"index"
+			],
+			[
+				"sessio",
+				"session_destroy"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"u",
+				"user"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"arra",
+				"array	$… = array (…)"
+			],
+			[
+				"to",
+				"toHex"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"onk",
+				"onkeypress	Attr"
+			],
+			[
+				"ur",
+				"uri"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"re",
+				"register_i"
+			],
+			[
+				"email",
+				"email_i"
+			],
+			[
+				"btn-",
+				"btn-register"
+			],
+			[
+				"eve",
+				"evento"
+			],
+			[
+				"delete",
+				"delete_event"
+			],
+			[
+				"model",
+				"model_event"
+			],
+			[
+				"date",
+				"date_format"
+			],
+			[
+				"fil",
+				"file_name"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"pos",
+				"post_body"
+			],
+			[
+				"po",
+				"post_date"
+			],
+			[
+				"_e",
+				"_email"
+			],
+			[
+				"_",
+				"_role"
+			],
+			[
+				"ed",
+				"_edit_link"
+			],
+			[
+				"_d",
+				"_dlt_link"
+			],
+			[
+				"htt",
+				"http_redirect"
+			],
+			[
+				"admi",
+				"administrador"
+			],
+			[
+				"mode",
+				"Model_user"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"if",
+				"if	if …"
+			],
+			[
+				"FON",
+				"font-family"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"main",
+				"mainmenu"
+			],
+			[
+				"ca",
+				"caracter"
+			],
+			[
+				"se",
+				"siguiente"
+			],
+			[
+				"str",
+				"strlen"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"bord",
+				"border-style"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 140.0,
+		"selected_items":
+		[
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"package contro",
+				"Package Control: List Packages"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"folde",
+				"Project: Add Folder"
+			],
+			[
+				"ave",
+				"File: Save All"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"av",
+				"File: Save All"
+			],
+			[
+				"AVE",
+				"File: Save All"
+			],
+			[
+				"statu",
+				"View: Toggle Status Bar"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"MENu",
+				"View: Toggle Menu"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"fol",
+				"Project: Add Folder"
+			],
+			[
+				"fodler",
+				"Project: Add Folder"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"cs",
+				"Set Syntax: CSS"
+			],
+			[
+				"status",
+				"View: Toggle Status Bar"
+			],
+			[
+				"foler",
+				"Project: Add Folder"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"flder",
+				"Project: Add Folder"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ",
+				"Package Control: Install Package"
+			],
+			[
+				"paca",
+				"Preferences: Browse Packages"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sode",
+				"Set Syntax: Rd (R Documentation)"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"prefe",
+				"Preferences: Settings - User"
+			]
+		],
+		"width": 382.0
+	},
+	"console":
+	{
+		"height": 623.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/baleromcr.com/application/controllers/Order.php",
+		"/C/xampp/htdocs/baleromcr.com/email.php",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/widgets/Widget - Material-Theme-Darker.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/widgets/Widget - Material-Theme.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/README.md",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/messages.json",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/package-metadata.json",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/messages/install.txt",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/messages/1.0.2.txt",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Material Theme - White Panels/Emmet.sublime-settings",
+		"/C/xampp/htdocs/baleromcr.com/application/controllers/Cart.php",
+		"/C/Users/Gerson/AppData/Local/Temp/Temp1_netflix&Chill.zip/index.html",
+		"/C/wamp/logs/php_error.log",
+		"/C/Vuforia Projects/Matute/Assets/Resources/UserInterface/ButtonSkins.guiskin",
+		"/C/Vuforia Projects/Matute/Assets/Resources/UserInterfaceSkin.guiskin",
+		"/C/Vuforia Projects/VideoPlay/Assets/Resources/Vuforia_About.txt",
+		"/D/Downloads/s",
+		"/D/Downloads/pattern (2).txt",
+		"/C/Vuforia Projects/VideoPlay/Assets/Scans/url-sample.txt",
+		"/C/Vuforia Projects/VideoPlay/Assets/Scans/url.txt",
+		"/C/Vuforia Projects/VideoPlay/Assets/Scans/colors.txt",
+		"/C/wamp/Projects/test/form.php",
+		"/D/Documents/credenciales_WiFi.lab3.txt",
+		"/C/wamp/bin/apache/apache2.4.9/wampserver.conf",
+		"/C/xampp/htdocs/index.html",
+		"/C/Users/Gerson/Desktop/m.txt",
+		"/D/Documents/Cloud-ARG/License Key.txt",
+		"/C/Vuforia Projects/Cloud-ARG/Assets/Metadata/metadata_5000.txt",
+		"/D/Documents/Cloud-ARG/Metadata/metadata_5000.txt",
+		"/C/World of Warcraft/ashran.dat",
+		"/C/Program Files (x86)/FirestormLauncher/Launcher.ini",
+		"/C/wamp/www/drinksdepotcr.com/_Textos folleto Franquicia/textos-franquicia.txt",
+		"/C/wamp/www/drinksdepotcr.com/php/sendemail.php",
+		"/C/wamp/www/drinksdepotcr.com/css/I succesfully completed the quest #24743 and got t",
+		"/C/wamp/www/baleromcr.com/application/.htaccess",
+		"/D/Downloads/Music/House Of Cards (2013) Season 1 -E.Rev 480p MKV x264/House Of Cards 1x09 Chapter 9.srt",
+		"/D/Downloads/Music/House Of Cards (2013) Season 1 -E.Rev 480p MKV x264/House.Of.Cards.2013.S01E04.720p.BluRay.x264.anoXmous.srt",
+		"/C/wamp/www/drinksdepotcr.com/old_index.html",
+		"/C/wamp/www/drinksdepotcr.com/index.html",
+		"/D/Downloads/d41d8cd9.htaccess",
+		"/C/wamp/www/baleromcr.com/application/views/cart_view.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Account.php",
+		"/D/Google/Seminario/links.txt",
+		"/D/Games/World of Warcraft/Warlords of Draenor 6.1.2/scripts.txt",
+		"/D/Google/Documents/PInfo.txt",
+		"/C/wamp/www/baleromcr.com/application/models/download_model.php",
+		"/C/wamp/www/baleromcr.com/application/views/errors/html/error_404.php",
+		"/C/wamp/www/baleromcr.com/application/views/errors/cli/error_404.php",
+		"/C/wamp/www/baleromcr.com/application/config/routes.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Display.php",
+		"/C/wamp/www/baleromcr.com/application/models/account_model.php",
+		"/C/wamp/www/test/index.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/header.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/sidebar.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/index.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/singles.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/albums.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/login.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Cart.php",
+		"/C/wamp/www/baleromcr.com/application/views/dashboard/footer.php",
+		"/C/wamp/www/baleromcr.com/AdminLTE2/pages/forms/general.html",
+		"/C/wamp/www/baleromcr.com/AdminLTE2/pages/UI/general.html",
+		"/C/wamp/www/baleromcr.com/AdminLTE2/pages/tables/simple.html",
+		"/C/wamp/www/baleromcr.com/application/config/autoload.php",
+		"/C/wamp/www/baleromcr.com/application/views/index.php",
+		"/C/wamp/www/drinksdepotcr.com/js/main.js",
+		"/C/wamp/www/test/form.php",
+		"/C/wamp/www/baleromcr.com/AdminLTE2/index2.html",
+		"/C/wamp/www/baleromcr.com/assets/dashboard/js/pages/dashboard.js",
+		"/C/wamp/www/baleromcr.com/assets/dashboard/js/app.js",
+		"/C/wamp/www/baleromcr.com/assets/dashboard/js/demo.js",
+		"/C/wamp/www/baleromcr.com/assets/dashboard/js/npm.js",
+		"/C/wamp/www/baleromcr.com/assets/dashboard/css/skins/skin-black.css",
+		"/C/wamp/www/baleromcr.com/application/views/header.php",
+		"/C/wamp/www/baleromcr.com/application/AdminLTE/pages/examples/lockscreen.html",
+		"/C/wamp/www/baleromcr.com/application/config/constants.php",
+		"/C/wamp/www/test/form.txt",
+		"/C/wamp/www/baleromcr.com/application/views/album_view.php",
+		"/C/wamp/www/baleromcr.com/data/leeme.txt",
+		"/C/wamp/www/baleromcr.com/application/views/related.php",
+		"/C/wamp/www/baleromcr.com/application/models/artist_model.php",
+		"/C/wamp/www/baleromcr.com/application/config/email.php",
+		"/C/wamp/bin/php/php5.5.12/php.ini",
+		"/C/wamp/www/flxenergydrink.com/info.txt",
+		"/C/Users/Gerson/AppData/Local/Temp/fz3temp-2/email.php",
+		"/C/wamp/www/flxenergydrink.com/php/sendemail.php",
+		"/C/Users/Gerson/AppData/Local/Temp/fz3temp-2/album_model.php",
+		"/C/Users/Gerson/AppData/Local/Temp/fz3temp-2/.htaccess",
+		"/C/Users/Gerson/AppData/Local/Temp/fz3temp-2/artist_model.php",
+		"/D/Google/Documents/Info.php",
+		"/C/wamp/www/flxenergydrink.com/information.html",
+		"/C/Users/Gerson/OneDrive/Proyectos/drinksdepotcr.com/.INFO_drinksdepot.txt",
+		"/C/Users/Gerson/OneDrive/Proyectos/my_domain_info.txt",
+		"/C/wamp/www/drinksdepotcr.com/_Textos folleto Franquicia/.INFO_drinksdepot.txt",
+		"/D/Downloads/balerom_db.sql",
+		"/D/Documents/credenciales_WiFi.lab3",
+		"/D/Downloads/Libro1_files/stylesheet.css",
+		"/C/wamp/www/baleromcr.com/application/controllers/Download.php",
+		"/C/wamp/www/baleromcr.com/application/views/search_results.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Search.php",
+		"/C/wamp/www/baleromcr.com/application/views/artist_view.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Album.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Artist.php",
+		"/C/wamp/www/baleromcr.com/application/models/album_model.php",
+		"/C/wamp/www/baleromcr.com/application/libraries/Paypal.php",
+		"/C/Users/Gerson/Desktop/Correo.cs",
+		"/C/wamp/www/baleromcr.com/application/views/hero-slider.php",
+		"/C/wamp/www/baleromcr.com/application/views/footer.php",
+		"/C/Users/Gerson/AppData/Local/Temp/Temp1_bootstrap-3.3.5-dist.zip/bootstrap-3.3.5-dist/js/bootstrap.min.js",
+		"/C/wamp/www/baleromcr.com/assets/js/bootstrap.min.js",
+		"/C/wamp/www/baleromcr.com/assets/js/jquery.min.js",
+		"/C/wamp/www/baleromcr.com/assets/js/main.js",
+		"/C/wamp/www/drinksdepotcr.com/js/jquery.js",
+		"/C/wamp/www/baleromcr.com/application/views/productos.php",
+		"/C/wamp/www/drinksdepotcr.com/images/index.html",
+		"/C/wamp/www/drinksdepotcr.com/products.html",
+		"/C/wamp/www/projects/GCM/php/functions.php",
+		"/C/wamp/www/baleromcr.com/index.php",
+		"/C/wamp/www/baleromcr.com/application/libraries/PayPal.php",
+		"/C/wamp/www/baleromcr.com/system/libraries/Cart.php",
+		"/C/wamp/www/baleromcr.com/system/libraries/Profiler.php",
+		"/C/wamp/www/baleromcr.com/system/libraries/Upload.php",
+		"/C/wamp/www/baleromcr.com/system/libraries/Javascript.php",
+		"/C/wamp/www/baleromcr.com/system/libraries/Table.php",
+		"/C/wamp/www/baleromcr.com/application/controllers/Test.php",
+		"/C/wamp/www/drinksdepotcr.com/contact.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"www",
+			"c:/wamp/www/",
+			"www",
+			"    \n",
+			"admin/",
+			"');\n",
+			"$(document).ready(function(){\n\n	new WOW().init();\n\n	/* Load Translations*/\n    var language_complete = navigator.language.split(\"-\");\n    var language = (language_complete[0]);\n    var url = window.location + \"\";\n    if (url.search('es.') >= 0) {language = 'es';}else if (url.search('en.') >= 0) {language = 'en';};\n    language = 'es';\n    i18n.init({ lng: language, debug: false }, function() {\n      $(\"#home\").i18n();\n    });\n\n	/* Initialize Thumbnail sliders*/\n	$('.slick-slider').slick({\n	  slidesToShow: 1,\n	  pauseOnHover:false,\n	  autoplay: true,\n	  autoplaySpeed: 7000,\n	  responsive: [\n	    {\n	      breakpoint: 480,\n	      settings: {\n	        centerMode: false,\n	        slidesToShow: 1,\n	        slidesToScroll: 1\n	      }\n	    }\n	  ]\n	});\n\n});",
+			"Video",
+			"Videos",
+			"Sencillo",
+			"Sencillos",
+			"Quick Example",
+			"!</",
+			"song",
+			"	\n",
+			"db_song",
+			"$albumId",
+			"request",
+			"POST",
+			"com",
+			"list",
+			"\">\n",
+			"<",
+			"?>\n",
+			"lastId",
+			"Vino Rincón del Sol ",
+			" · ",
+			"data/music/balerom/",
+			"index",
+			"	/* Displays the information of a single*/\n	public function single($songId = 1){\n\n		// Get the album information from the database\n		$query = $this->db->get_where('db_song', array('song_id' => $songId));\n		$songInfo = $query->row_array(); \n\n		// Get the artist information from the database\n		$query = $this->db->get_where('db_artist', array('artist_id' => $songInfo['song_artist']));\n		$albumArtist = $query->row_array();	\n\n		// Set the data for the view\n		$data['songId'] = $songId;\n		$data['albumId'] = 'single';\n		$data['title'] = $songInfo['song_title'];\n		$data['year'] = $songInfo['song_year'];\n		$data['price'] = $songInfo['song_price'];\n		$data['artistId'] = $songInfo['song_artist'];\n		$data['artistName'] = $albumArtist['artist_name'];\n		\n		/* Load the view files */\n		$this->load->view('static/header', $data);\n		$this->load->view('singles/song', $data);\n    	$this->load->view('albums/related', $data);\n		$this->load->view('static/footer');\n	}",
+			"zoomInUp",
+			"fadeInUp",
+			"clave:  DrinksDepot2015",
+			"// Load the view files",
+			"glow",
+			"grow",
+			"fadeInRight",
+			"fadeInLeft",
+			"float",
+			"/**",
+			"0",
+			"product.default",
+			"jpg",
+			".s",
+			"@",
+			"wrapper",
+			"contanct",
+			" data-wow-delay=\"500ms\"",
+			";\n",
+			"bs-example-navbar-collapse-1",
+			"More",
+			"	0 / 250 MB	\nChange Password	Change Quota	Delete",
+			" height:65vh;",
+			"60vh",
+			"width:90%",
+			"albumId",
+			"album",
+			"'",
+			"utf8mb4",
+			".hvr-grow",
+			"fadeInUpBig",
+			"slideInUp",
+			"bounceInUp",
+			"%;",
+			"bounceInDown",
+			"zoomInDown",
+			"album",
+			"components",
+			"templates",
+			"extras",
+			"zoomInUp",
+			"slideInUp",
+			"zoomIn",
+			"col-md-2",
+			"col-md-3",
+			"col-md-2",
+			"jpg",
+			"1s",
+			"defaults",
+			"duration",
+			"(",
+			"<div class=\"col-md-3\">",
+			"http://placehold.it/300x200",
+			"300x200",
+			"350x250",
+			"&nbsp;",
+			"font-family: 'Share Tech Mono';",
+			");\n",
+			"font-family: 'Share Tech Mono';",
+			"images/slider/",
+			"gb",
+			"fade",
+			"slier",
+			"nutrition",
+			"body",
+			"box-s",
+			">\n",
+			"wow flipInX",
+			"dropdownMenu1",
+			"2s",
+			"carousel",
+			"carousel-example-generic",
+			"content",
+			"wow pulse",
+			"pulse",
+			"section",
+			"url",
+			"165",
+			"homepage",
+			"wow fadeInDown",
+			" wow",
+			" wow fadeInDown",
+			"873333",
+			"871111",
+			"870000",
+			"10%, #190A05 90%",
+			"rgba(218, 48, 52, .9)",
+			"da3034",
+			"rgba(218, 48, 52, 1)",
+			"180deg",
+			"0deg",
+			"45deg",
+			"90deg",
+			"\"js",
+			"../js/jq",
+			"c=\"js/jq",
+			"src=\"imag",
+			"css/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"c:/wamp/Projects",
+			"Projects",
+			"<?php echo base_url();?>admin/",
+			"album",
+			"Albums",
+			"Video",
+			"Videos",
+			"video",
+			"$albumInfo->album_id",
+			"search results",
+			"ID",
+			"",
+			", ",
+			"data/music/",
+			"home",
+			"zoomIn",
+			"zoomInUp",
+			"",
+			"/* Load the view files */",
+			"shrink",
+			"glow",
+			"sweep-to-top",
+			"grow",
+			"products.description.default",
+			"contact",
+			"",
+			"main-navbar",
+			"",
+			" height:60vh;",
+			"",
+			"65vh",
+			"width:100%",
+			"songId",
+			"song",
+			"\"",
+			"fadeInUp",
+			"fadeInUpBig",
+			"slideInUpbig",
+			"slideInUp",
+			"bounceInUp",
+			"bounceInDown",
+			"song",
+			"index",
+			"static",
+			"readme",
+			"zoomInDown",
+			"zoomInUp",
+			"slideInDown",
+			"slideInUp",
+			"col-md-3",
+			"col-md-2",
+			"col-md-3",
+			"png",
+			"<div class=\"col-md-3 wow zoomIn\">",
+			"images/button",
+			"350x250",
+			"300x250",
+			"300x200",
+			"",
+			"images/homepage/",
+			"slider",
+			"product",
+			"",
+			"shoppingCart",
+			"0.5s",
+			"main-slider",
+			"",
+			" ",
+			" wow",
+			"872222",
+			"873333",
+			"871111",
+			"30%, #190A05 70%",
+			"#870000",
+			"870000",
+			"#870000",
+			"270deg",
+			"180deg",
+			"0deg",
+			"45deg",
+			"\"../js",
+			"c=\"../js/jq",
+			"src=\"../imag",
+			"../css/",
+			"\"../imag",
+			"../js/",
+			"../css/",
+			"fadeInDown",
+			"InDown",
+			":",
+			"",
+			"INTO `de`.`",
+			"about.info",
+			"218, 48, 52, 1",
+			"da3034",
+			"218, 48, 52",
+			"",
+			"7, 7, 7",
+			"=\"../css",
+			"9f1217",
+			"8n=\"product.content1\"",
+			"data-i18n=\"product.\"",
+			"#product",
+			"information",
+			"data",
+			"_GET",
+			"div",
+			"id=\"secti",
+			"",
+			"Season",
+			"'",
+			"1",
+			"ref",
+			"class=\"scroll-section\" id=\"secti",
+			"6",
+			"5",
+			"scroll-div",
+			"",
+			"handle",
+			"Docentes",
+			"Usuarios",
+			"Users",
+			"",
+			"=",
+			"-",
+			"param",
+			"condition",
+			"p"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

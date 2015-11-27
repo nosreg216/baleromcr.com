@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-	    <div class="col-sm-9">
+	    <div class="col-sm-12">
             <h1 class="page-header"><?php echo $title; ?></h1>
         </div>
 
@@ -8,7 +8,7 @@
 		// No Results Found validation and message
 		if ($albumCount == 0 && $songCount == 0 && $albumSongCount == 0 && $videoCount == 0 ) {
 			echo br();
-			echo div_open('col-sm-9');
+			echo div_open('col-sm-12 col-md-6');
 			echo heading('No se encontraron resultados.', 3);
 			echo div_close();
 		} else {
@@ -16,7 +16,7 @@
 		// Case: Found a match in Albums
 		if ($albumCount > 0) {
 			echo br();
-			echo div_open('col-sm-9');
+			echo div_open('col-sm-12 col-md-6');
 			echo heading("Albums ($albumCount)", 4, array('class' => 'page-header'));
 
 			echo div_open('list-group');
@@ -36,7 +36,7 @@
 		// Case: Found a match in Songs
 		if ($songCount > 0) {
 			echo br();
-			echo div_open('col-sm-9');
+			echo div_open('col-sm-12 col-md-6');
 			echo heading("Sencillos ($songCount)", 4, array('class' => 'page-header'));
 
 			echo div_open('list-group');
@@ -56,7 +56,7 @@
 		// Case: Found a match in Songs from an album
 		if ($albumSongCount > 0) {
 			echo br();
-			echo div_open('col-sm-9');
+			echo div_open('col-sm-12 col-md-6');
 			echo heading("Canciones ($albumSongCount)", 4, array('class' => 'page-header'));
 
 			echo div_open('list-group');

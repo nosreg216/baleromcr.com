@@ -180,6 +180,10 @@ class Order extends CI_Controller {
 	
 	public function download()
 	{
+		if (null == $this->input->post('order_id')) {
+			header("Location: " . base_url());
+		}
+
 		$this->load->model('download_model');
 
 		$itemType = $this->input->post('item_type');

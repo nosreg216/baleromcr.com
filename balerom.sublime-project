@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "application\\config"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "application\\controllers"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "application\\models"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "application\\views"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "assets"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "application\\helpers"
+		}
+	]
+}

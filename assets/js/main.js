@@ -2,6 +2,11 @@
 
 $(document).ready(function(){
 
+	/* Initialize Thumbnail sliders*/
+    $('.carousel').carousel({
+        interval: 10000
+    });
+
 
 	/* Initialize Thumbnail sliders*/
 	$('.thumnb-slider').slick({
@@ -9,7 +14,6 @@ $(document).ready(function(){
 	  centerPadding: '5%',
 	  pauseOnHover:true,
 	  autoplay: true,
-	  arrows: true,
 	  responsive: [
 	    {
 	      breakpoint: 480,
@@ -22,4 +26,7 @@ $(document).ready(function(){
 	    }
 	  ]
 	});
+
+
+
 });//EOF

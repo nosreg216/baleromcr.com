@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2015 at 08:52 PM
+-- Generation Time: Nov 25, 2015 at 04:17 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `balerom_db`
 --
+CREATE DATABASE IF NOT EXISTS `balerom_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `balerom_db`;
 
 -- --------------------------------------------------------
 
@@ -38,19 +40,31 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('03e02f6a9785e1a659117f6b1396f25bd1058db1', '::1', 1444241108, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234313130383b),
-('255f9dc80551abf4c1517a3adc80fa5306b0bca9', '::1', 1444236907, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233363733383b636172745f636f6e74656e74737c613a333a7b733a31303a22636172745f746f74616c223b643a323b733a31313a22746f74616c5f6974656d73223b643a313b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b613a373a7b733a323a226964223b733a343a2238313934223b733a333a22717479223b643a313b733a353a227072696365223b643a323b733a343a226e616d65223b733a31303a2250736963c3b370617461223b733a343a2274797065223b733a313a2231223b733a353a22726f776964223b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b733a383a22737562746f74616c223b643a323b7d7d),
-('40f6cb5c4b0ed128c853be72538478ef72ab9a33', '::1', 1444243106, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234323830353b),
-('4112bb2ca768b7be649cf33afd89436cb8013911', '::1', 1444243281, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234333130363b),
-('53517f6ceb32c8b00464840542f8c8318fef7c83', '::1', 1444238925, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233383832393b636172745f636f6e74656e74737c613a353a7b733a31303a22636172745f746f74616c223b643a32323b733a31313a22746f74616c5f6974656d73223b643a333b733a33323a226637656661346638363461653962383864343335323766346231346637353066223b613a373a7b733a323a226964223b733a343a2234303936223b733a333a22717479223b643a313b733a353a227072696365223b643a31303b733a343a226e616d65223b733a31363a2242616c65726f6d20564f4c4c2049492e223b733a343a2274797065223b733a313a2232223b733a353a22726f776964223b733a33323a226637656661346638363461653962383864343335323766346231346637353066223b733a383a22737562746f74616c223b643a31303b7d733a33323a226461306231623562656337316234363862636162383732613634353935353431223b613a373a7b733a323a226964223b733a343a2234303937223b733a333a22717479223b643a313b733a353a227072696365223b643a31303b733a343a226e616d65223b733a32323a2253656e74696d69656e746f20416e7469736f6369616c223b733a343a2274797065223b733a313a2232223b733a353a22726f776964223b733a33323a226461306231623562656337316234363862636162383732613634353935353431223b733a383a22737562746f74616c223b643a31303b7d733a33323a223363383863316462313662393532336234646364636435373261613165313661223b613a373a7b733a323a226964223b733a343a2238313935223b733a333a22717479223b643a313b733a353a227072696365223b643a323b733a343a226e616d65223b733a31323a22566f7920706f7220456c6c61223b733a343a2274797065223b733a313a2231223b733a353a22726f776964223b733a33323a223363383863316462313662393532336234646364636435373261613165313661223b733a383a22737562746f74616c223b643a323b7d7d),
-('879f0b379a02dfaa01cb1c9a7873e57c65ae2427', '::1', 1444238641, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233383532323b636172745f636f6e74656e74737c613a353a7b733a31303a22636172745f746f74616c223b643a32323b733a31313a22746f74616c5f6974656d73223b643a333b733a33323a226637656661346638363461653962383864343335323766346231346637353066223b613a373a7b733a323a226964223b733a343a2234303936223b733a333a22717479223b643a313b733a353a227072696365223b643a31303b733a343a226e616d65223b733a31363a2242616c65726f6d20564f4c4c2049492e223b733a343a2274797065223b733a313a2232223b733a353a22726f776964223b733a33323a226637656661346638363461653962383864343335323766346231346637353066223b733a383a22737562746f74616c223b643a31303b7d733a33323a226461306231623562656337316234363862636162383732613634353935353431223b613a373a7b733a323a226964223b733a343a2234303937223b733a333a22717479223b643a313b733a353a227072696365223b643a31303b733a343a226e616d65223b733a32323a2253656e74696d69656e746f20416e7469736f6369616c223b733a343a2274797065223b733a313a2232223b733a353a22726f776964223b733a33323a226461306231623562656337316234363862636162383732613634353935353431223b733a383a22737562746f74616c223b643a31303b7d733a33323a223363383863316462313662393532336234646364636435373261613165313661223b613a373a7b733a323a226964223b733a343a2238313935223b733a333a22717479223b643a313b733a353a227072696365223b643a323b733a343a226e616d65223b733a31323a22566f7920706f7220456c6c61223b733a343a2274797065223b733a313a2231223b733a353a22726f776964223b733a33323a223363383863316462313662393532336234646364636435373261613165313661223b733a383a22737562746f74616c223b643a323b7d7d),
-('888eca3a916eb71123e8c2bd9c0e0a2596b6142c', '::1', 1444242031, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234313739353b),
-('96a29fc6bc1b488f9fe2925af8364b9800e82f6f', '::1', 1444243919, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234333930343b),
-('9b31d234301066b022d64ce81e2f7610abe18c2a', '::1', 1444239153, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233393134373b),
-('a80c23c323ec5b9e12baed8a3cce8c3106792b79', '::1', 1444242470, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234323338333b),
-('a94e6f17d21dac5f90137effb0842bbaf19017da', '::1', 1444237524, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233373433313b636172745f636f6e74656e74737c613a333a7b733a31303a22636172745f746f74616c223b643a323b733a31313a22746f74616c5f6974656d73223b643a313b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b613a373a7b733a323a226964223b733a343a2238313934223b733a333a22717479223b643a313b733a353a227072696365223b643a323b733a343a226e616d65223b733a31303a2250736963c3b370617461223b733a343a2274797065223b733a313a2231223b733a353a22726f776964223b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b733a383a22737562746f74616c223b643a323b7d7d),
-('c85b603a0feb82c8e3fbaf512dc1b1b2c4394439', '::1', 1444243880, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343234333538353b),
-('cf7ac030d6aedb7db2263bccc3d5eab5fc770412', '::1', 1444237404, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434343233373131373b636172745f636f6e74656e74737c613a333a7b733a31303a22636172745f746f74616c223b643a323b733a31313a22746f74616c5f6974656d73223b643a313b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b613a373a7b733a323a226964223b733a343a2238313934223b733a333a22717479223b643a313b733a353a227072696365223b643a323b733a343a226e616d65223b733a31303a2250736963c3b370617461223b733a343a2274797065223b733a313a2231223b733a353a22726f776964223b733a33323a223930623865386563613930373536393035626638306332393361653661353061223b733a383a22737562746f74616c223b643a323b7d7d);
+('8ce75b7fd163e93101aaef377a4fa12185d06e91', '::1', 1447981089, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434373938313037323b6c6f675f7374617475737c733a373a2273756363657373223b),
+('956556c324f055321b05e17454fd132f394bba2a', '::1', 1445382887, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434353338323834333b6c6f675f7374617475737c733a373a2273756363657373223b),
+('a78d6b154ef6400b9174006b30fad012cdf3e1a8', '::1', 1445417957, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434353431373934393b6c6f675f7374617475737c733a373a2273756363657373223b),
+('c7c3a0f9260fff57357874d6c0fa58ff165178b6', '::1', 1445382843, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434353338323834333b6c6f675f7374617475737c733a373a2273756363657373223b),
+('dc73c8d5eea06b92bd4b86c476235f6fd2bde4ab', '::1', 1445378145, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434353337383133383b6c6f675f7374617475737c733a373a2273756363657373223b),
+('fbe42acb7d2686c4ef657a1cf0bb3c866000b3c5', '::1', 1447980924, 0x5f5f63695f6c6173745f726567656e65726174657c693a313434373938303732343b6c6f675f7374617475737c733a373a2273756363657373223b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `db_account`
+--
+
+CREATE TABLE IF NOT EXISTS `db_account` (
+  `acc_username` varchar(10) NOT NULL DEFAULT 'balerom',
+  `acc_password` varchar(256) NOT NULL,
+  `acc_last_access` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `db_account`
+--
+
+INSERT INTO `db_account` (`acc_username`, `acc_password`, `acc_last_access`) VALUES
+('balerom', '$2y$10$YAoOH4YLLh4wAUMZ2QpmIumTln.t9Vf0W42JyVJpBwFksGuRswz9K', '2015-10-20');
 
 -- --------------------------------------------------------
 
@@ -59,9 +73,8 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `db_album` (
-  `album_id` int(11) NOT NULL,
+  `album_id` int(11) NOT NULL DEFAULT '4096',
   `album_title` varchar(50) NOT NULL,
-  `album_artist` int(11) NOT NULL DEFAULT '0',
   `album_year` year(4) NOT NULL,
   `album_price` double NOT NULL,
   `isFeatured` tinyint(1) NOT NULL DEFAULT '1'
@@ -71,55 +84,58 @@ CREATE TABLE IF NOT EXISTS `db_album` (
 -- Dumping data for table `db_album`
 --
 
-INSERT INTO `db_album` (`album_id`, `album_title`, `album_artist`, `album_year`, `album_price`, `isFeatured`) VALUES
-(4096, 'Balerom VOLL II.', 0, 2010, 10, 1),
-(4097, 'Sentimiento Antisocial', 0, 2005, 10, 1),
-(4098, 'Solo Soy', 0, 2008, 10, 1),
-(4099, 'Viaje Salvaje', 0, 2013, 10, 1),
-(4100, 'Amor Artificial', 0, 2007, 10, 0),
-(4101, 'Evolución en Vivo', 0, 2010, 10, 0);
+INSERT INTO `db_album` (`album_id`, `album_title`, `album_year`, `album_price`, `isFeatured`) VALUES
+(4096, 'Balerom VOLL II.', 2010, 10, 1),
+(4097, 'Sentimiento Antisocial', 2005, 10, 1),
+(4098, 'Solo Soy', 2008, 10, 1),
+(4099, 'Viaje Salvaje', 2013, 10, 1),
+(4100, 'Amor Artificial', 2007, 10, 0),
+(4101, 'Evolución en Vivo', 2010, 10, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `db_album_tracklist`
+-- Table structure for table `db_album_track`
 --
 
-CREATE TABLE IF NOT EXISTS `db_album_tracklist` (
-  `song_id` int(11) NOT NULL,
-  `album_id` int(11) NOT NULL
+CREATE TABLE IF NOT EXISTS `db_album_track` (
+  `track_id` int(11) NOT NULL,
+  `track_title` varchar(50) NOT NULL,
+  `track_album` int(11) NOT NULL DEFAULT '0',
+  `track_price` double NOT NULL DEFAULT '2'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `db_album_tracklist`
+-- Dumping data for table `db_album_track`
 --
 
-INSERT INTO `db_album_tracklist` (`song_id`, `album_id`) VALUES
-(8192, 4096),
-(8193, 4096),
-(8201, 4099),
-(8196, 4101),
-(8197, 4101),
-(8198, 4101),
-(8200, 4101);
+INSERT INTO `db_album_track` (`track_id`, `track_title`, `track_album`, `track_price`) VALUES
+(4096, '01 - Tal Vez', 4097, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `db_artist`
+-- Table structure for table `db_bundle`
 --
 
-CREATE TABLE IF NOT EXISTS `db_artist` (
-  `artist_id` int(11) NOT NULL,
-  `artist_name` varchar(50) NOT NULL
+CREATE TABLE IF NOT EXISTS `db_bundle` (
+  `bundle_id` int(11) NOT NULL DEFAULT '4096',
+  `bundle_title` varchar(60) NOT NULL,
+  `bundle_price` int(11) NOT NULL,
+  `isFeatured` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `db_artist`
+-- Table structure for table `db_bundle_item`
 --
 
-INSERT INTO `db_artist` (`artist_id`, `artist_name`) VALUES
-(0, 'Balerom!');
+CREATE TABLE IF NOT EXISTS `db_bundle_item` (
+  `bundle_id` int(11) NOT NULL,
+  `item_type` int(11) NOT NULL DEFAULT '3',
+  `item_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -128,18 +144,22 @@ INSERT INTO `db_artist` (`artist_id`, `artist_name`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `db_order` (
-  `order_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL DEFAULT '1024',
   `order_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `order_total` int(11) NOT NULL DEFAULT '0',
-  `order_status` tinyint(1) NOT NULL DEFAULT '0'
+  `order_token` varchar(64) DEFAULT NULL,
+  `order_status` tinyint(1) NOT NULL DEFAULT '0',
+  `order_email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `db_order`
 --
 
-INSERT INTO `db_order` (`order_id`, `order_date`, `order_total`, `order_status`) VALUES
-(1025, '2015-10-07 17:32:31', 0, 0);
+INSERT INTO `db_order` (`order_id`, `order_date`, `order_token`, `order_status`, `order_email`) VALUES
+(1026, '2015-10-16 22:10:56', '24146db4eb48c718b84cae0a0799dcfc', 1, 'nosreg216@gmail.com'),
+(1027, '2015-10-16 23:25:50', '883e881bb4d22a7add958f2d6b052c9f', 1, 'nosreg216@outlook.com'),
+(1028, '2015-10-16 23:30:58', '3806734b256c27e41ec2c6bffa26d9e7', 1, 'nosreg216@gmail.com'),
+(1029, '2015-10-17 06:58:06', '84d2004bf28a2095230e8e14993d398d', 1, 'nosreg216@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -148,20 +168,22 @@ INSERT INTO `db_order` (`order_id`, `order_date`, `order_total`, `order_status`)
 --
 
 CREATE TABLE IF NOT EXISTS `db_order_item` (
-  `order_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL DEFAULT '1024',
   `item_id` int(11) NOT NULL,
   `item_type` int(11) NOT NULL,
-  `item_subtotal` int(11) NOT NULL
+  `item_subtotal` int(11) NOT NULL,
+  `downloaded` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `db_order_item`
 --
 
-INSERT INTO `db_order_item` (`order_id`, `item_id`, `item_type`, `item_subtotal`) VALUES
-(1025, 4096, 2, 10),
-(1025, 4097, 2, 10),
-(1025, 8195, 1, 2);
+INSERT INTO `db_order_item` (`order_id`, `item_id`, `item_type`, `item_subtotal`, `downloaded`) VALUES
+(1026, 4096, 1, 10, 6),
+(1027, 4096, 2, 2, 1),
+(1028, 4096, 2, 2, 5),
+(1029, 4096, 2, 2, 9);
 
 -- --------------------------------------------------------
 
@@ -170,30 +192,12 @@ INSERT INTO `db_order_item` (`order_id`, `item_id`, `item_type`, `item_subtotal`
 --
 
 CREATE TABLE IF NOT EXISTS `db_song` (
-  `song_id` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL DEFAULT '1024',
   `song_title` varchar(50) NOT NULL,
-  `song_artist` int(11) NOT NULL DEFAULT '0',
   `song_year` year(4) NOT NULL,
   `song_price` double NOT NULL DEFAULT '2',
-  `isSingle` tinyint(1) NOT NULL DEFAULT '0',
   `isFeatured` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `db_song`
---
-
-INSERT INTO `db_song` (`song_id`, `song_title`, `song_artist`, `song_year`, `song_price`, `isSingle`, `isFeatured`) VALUES
-(8192, 'Tal Vez', 0, 2010, 2, 0, 0),
-(8193, 'Labios Prohibidos', 0, 2010, 2, 0, 0),
-(8194, 'Psicópata', 0, 2003, 2, 1, 1),
-(8195, 'Voy por Ella', 0, 2003, 2, 1, 1),
-(8196, 'El Mañanero', 0, 2010, 2, 0, 1),
-(8197, 'Superhéroe', 0, 2010, 2, 0, 1),
-(8198, 'En el Éxtasis', 0, 2010, 2, 0, 1),
-(8199, 'Contra el dolor de la mente', 0, 2010, 2, 0, 0),
-(8200, 'Esclavo ', 0, 2010, 2, 0, 0),
-(8201, ' La Máquina', 0, 2013, 2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -202,20 +206,21 @@ INSERT INTO `db_song` (`song_id`, `song_title`, `song_artist`, `song_year`, `son
 --
 
 CREATE TABLE IF NOT EXISTS `db_video` (
-  `video_id` int(11) NOT NULL,
+  `video_id` int(11) NOT NULL DEFAULT '4096',
   `video_title` varchar(50) NOT NULL,
+  `video_format` varchar(6) NOT NULL,
   `video_year` year(4) NOT NULL,
   `video_price` double NOT NULL,
-  `video_artist` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6146 DEFAULT CHARSET=latin1;
+  `isFeatured` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `db_video`
 --
 
-INSERT INTO `db_video` (`video_id`, `video_title`, `video_year`, `video_price`, `video_artist`) VALUES
-(6144, 'Video 1', 2015, 10, 0),
-(6145, 'Video 2', 2015, 20, 0);
+INSERT INTO `db_video` (`video_id`, `video_title`, `video_format`, `video_year`, `video_price`, `isFeatured`) VALUES
+(4096, 'Video 1', '', 2015, 10, 1),
+(4097, 'Video 2', '', 2015, 20, 1);
 
 --
 -- Indexes for dumped tables
@@ -229,89 +234,76 @@ ALTER TABLE `ci_sessions`
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
+-- Indexes for table `db_account`
+--
+ALTER TABLE `db_account`
+  ADD PRIMARY KEY (`acc_username`);
+
+--
 -- Indexes for table `db_album`
 --
 ALTER TABLE `db_album`
-  ADD PRIMARY KEY (`album_id`),
-  ADD KEY `album_artist` (`album_artist`);
+  ADD PRIMARY KEY (`album_id`);
 
 --
--- Indexes for table `db_album_tracklist`
+-- Indexes for table `db_album_track`
 --
-ALTER TABLE `db_album_tracklist`
-  ADD PRIMARY KEY (`song_id`,`album_id`),
-  ADD KEY `fk_album_id` (`album_id`);
+ALTER TABLE `db_album_track`
+  ADD PRIMARY KEY (`track_id`),
+  ADD KEY `song_artist` (`track_album`);
 
 --
--- Indexes for table `db_artist`
+-- Indexes for table `db_bundle`
 --
-ALTER TABLE `db_artist`
-  ADD PRIMARY KEY (`artist_id`);
+ALTER TABLE `db_bundle`
+  ADD PRIMARY KEY (`bundle_id`);
+
+--
+-- Indexes for table `db_bundle_item`
+--
+ALTER TABLE `db_bundle_item`
+  ADD PRIMARY KEY (`item_type`,`item_id`);
 
 --
 -- Indexes for table `db_order`
 --
 ALTER TABLE `db_order`
-  ADD PRIMARY KEY (`order_id`);
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `order_token` (`order_token`);
 
 --
 -- Indexes for table `db_order_item`
 --
 ALTER TABLE `db_order_item`
-  ADD PRIMARY KEY (`item_id`,`item_type`),
   ADD KEY `order_id` (`order_id`);
 
 --
 -- Indexes for table `db_song`
 --
 ALTER TABLE `db_song`
-  ADD PRIMARY KEY (`song_id`),
-  ADD KEY `song_artist` (`song_artist`);
+  ADD PRIMARY KEY (`song_id`);
 
 --
 -- Indexes for table `db_video`
 --
 ALTER TABLE `db_video`
-  ADD PRIMARY KEY (`video_id`),
-  ADD KEY `video_artist` (`video_artist`);
+  ADD PRIMARY KEY (`video_id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `db_video`
---
-ALTER TABLE `db_video`
-  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6146;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `db_album`
+-- Constraints for table `db_album_track`
 --
-ALTER TABLE `db_album`
-  ADD CONSTRAINT `fk_artist` FOREIGN KEY (`album_artist`) REFERENCES `db_artist` (`artist_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `db_album_tracklist`
---
-ALTER TABLE `db_album_tracklist`
-  ADD CONSTRAINT `fk_album_id` FOREIGN KEY (`album_id`) REFERENCES `db_album` (`album_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_song_id` FOREIGN KEY (`song_id`) REFERENCES `db_song` (`song_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `db_album_track`
+  ADD CONSTRAINT `db_album_track_ibfk_1` FOREIGN KEY (`track_album`) REFERENCES `db_album` (`album_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `db_order_item`
 --
 ALTER TABLE `db_order_item`
   ADD CONSTRAINT `db_order_item_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `db_order` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `db_video`
---
-ALTER TABLE `db_video`
-  ADD CONSTRAINT `fk_video` FOREIGN KEY (`video_artist`) REFERENCES `db_artist` (`artist_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
