@@ -38,40 +38,40 @@ class Album_model extends CI_Model {
     public function add($items = null)
     {    
         /* Default ID (First) */
-        $lastId = 4096;
+        $album_id = 0;
 
-        /* Get the ID of the previous album */
+        /* Get the ID of the last inserted album */
         $this->db->limit(1);
         $this->db->select('album_id');
         $this->db->order_by('album_id DESC');
         $query = $this->db->get('db_album');
 
-        /* Validate if table is not empty */
-        if ($query->num_rows() == 1) {
-            $lastId = $query->row();
-            $newID = $lastId->album_id + 1;
+        /* Validate if table was empty */
+        if ($query->num_rows() != 0) {
+            $result = $query->row();
+            $album_id = $result->album_id + 1;
         }
         
         /* Define the data before insert */
-        $data['album_id'] = $newID;
-        $data['album_title'] = $items['title'];
-        $data['album_year'] = $items['year'];
-        $data['album_price'] = $items['title'];
+        $data['album_id'] = $album_id;
+        $data['album_title'] = $items['album_title'];
+        $data['album_year'] = $items['album_year'];
+        $data['album_price'] = $items['album_price'];
 
         /* Perform the actual insert */
         $this->db->insert('db_album', $data);
 
         /* Returns the new album's ID*/
-        return $newID;
+        return $album_id;
     }
 
 
-    public function add_song($albumId, $data = null)
+    public function add_track($track_data)
     {    
         /* Default ID (First) */
-        $lastId = 1024;
+        $track_id = 0;
 
-        /* Get the ID of the previous order */
+        /* Get the ID of the previous song */
         $this->db->limit(1);
         $this->db->select('track_id');
         $this->db->order_by('track_id DESC');
@@ -79,25 +79,23 @@ class Album_model extends CI_Model {
 
         /* Validate if table is not empty */
         if ($query->num_rows() == 1) {
-            $lastId = $query->row();
-            $newID = $lastId->track_id + 1;
+            $result = $query->row();
+            $track_id = $result->track_id + 1;
         }
         
         /* Define the data before insert */
-        $data['track_id'] = $newID;
-        $data['track_title'] = $data['title'];
-        $data['track_price'] = $data['price'];
+        $data['track_id'] = $track_id;
+        $data['track_album'] = $track_data['track_album'];
+        $data['track_title'] = $track_data['track_title'];
+        $data['track_price'] = $track_data['track_price'];
 
         /* Perform the actual insert */
         $this->db->insert('db_album_track', $data);
-
-        /* Returns the new order's ID*/
-        return $newID;
     }
 
     public function delete($id)
     {
-    	$this->db->delete('', array('' => $id));
+    	$this->db->delete('db_album', array('album_id' => $id));
     }
 }
 ?>

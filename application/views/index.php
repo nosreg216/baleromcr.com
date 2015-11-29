@@ -26,17 +26,14 @@
 	<div id="myCarousel" class="carousel slide">
 	    <!-- Wrapper for Slides -->
 	    <div class="carousel-inner">
-	        <div class="item active">
-				<video autoplay>
-				  <source src="data/banners/video_1.mp4" type="video/mp4">
-				</video>
-	        </div>
-	        <div class="item">
-	        	<img src="data/banners/wallpaper_1.jpg">
-	        </div>
-	        <div class="item">
-				<img src="data/banners/wallpaper_1.jpg">
-	        </div>
+            <div class="item active">
+        		<video autoplay muted>
+        		  <source src="data/banners/video_1.mp4" type="video/mp4">
+        		</video>
+            </div>
+            <div class="item">
+                <img src="data/banners/wallpaper_1.jpg">
+            </div>
 	    </div>
 	</div>
 </div>
@@ -58,7 +55,7 @@
 		    </div>
 		    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 		      <div class="panel-body">
-					<?php album_list_thumbnail($albumList); ?>	
+            <?php album_list_thumbnail($albumList); ?>	
 		      </div>
 		    </div>
 		  </div>
@@ -72,18 +69,7 @@
 		    </div>
 		    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 		      <div class="panel-body">
-					<?php 
-						foreach ($albumList as $album) {
-							$id = $album['album_id'];
-							$title = $album['album_title'];
-							$year = $album['album_year'];
-							echo div_open("col-md-6");
-								echo a_open("thumbnail", base_url()."album/$id");
-									echo img("data/music/albums/$id/cover.png");
-								echo a_close();
-							echo div_close();
-						}
-					?>	
+                <?php album_list_thumbnail($albumList); ?>
 		      </div>
 		    </div>
 		  </div>
@@ -96,19 +82,7 @@
 		      </h4>
 		    </div>
 		    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-		      <div class="panel-body">
-					<?php 
-						foreach ($albumList as $album) {
-							$id = $album['album_id'];
-							$title = $album['album_title'];
-							$year = $album['album_year'];
-							echo div_open("col-md-6");
-								echo a_open("thumbnail", base_url()."album/$id");
-									echo img("data/music/albums/$id/cover.png");
-								echo a_close();
-							echo div_close();
-						}
-					?>	
+                <?php album_list_thumbnail($albumList); ?>
 		      </div>
 		    </div>
 		  </div>

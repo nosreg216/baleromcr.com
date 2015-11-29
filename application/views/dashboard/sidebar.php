@@ -11,7 +11,7 @@
     <li><a href="<?php echo base_url();?>admin/reports"><i class="fa fa-shopping-cart"></i> <span>Ventas</span></a></li>
 
     <li class="header">Gestión de Contenido</li>
-    <li><a href="<?php echo base_url();?>admin/albums"><i class="fa fa-music"></i> <span>Albums</span></a></li>
+    <li><a href="<?php echo base_url();?>admin/albums"><i class="fa fa-book"></i> <span>Albums</span></a></li>
     <li><a href="<?php echo base_url();?>admin/singles"><i class="fa fa-music"></i> <span>Sencillos</span></a></li>
     <li><a href="<?php echo base_url();?>admin/videos"><i class="fa fa-youtube-play"></i> <span>Videos</span></a></li>
     <li><a href="<?php echo base_url();?>admin/bundles"><i class="fa fa-th-large"></i> <span>Paquetes</span></a></li>

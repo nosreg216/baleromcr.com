@@ -1,0 +1,22 @@
+- Eliminar un elemento, lo elimina de las ordenes de compra que lo tienen.
+- Acceder a una orden invalida, redirecciona a la pagina de inicio
+- Los nombres de elementos no pueden contener parentesis?
+
+= No usar tildes en los nombres de archivo 
+
+
+upload_max_filesize = 1000M ;1GB
+post_max_size = 1000M
+
+
+
+
+Retraso Programado:
+
+Todo lo referente a Bundles
+
+
+Baja Prioridad:
+
+Eliminar una cancion de album no lo elimina de las ordenes activas
+http://127.0.0.1/baleromcr.com/order/6d70cb65d15211726dcce4c0e971e21c

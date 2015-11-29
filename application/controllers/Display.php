@@ -9,6 +9,7 @@ class Display extends CI_Controller {
         $this->load->library('session');
     }
 
+    /* Homepage Display */
 	public function page($page = 'index'){
 	
 		/* Load Data Models */		
@@ -52,12 +53,16 @@ class Display extends CI_Controller {
 
 	public function album_editor($albumId)
 	{
-		$data['title'] = "cPanel BaleromCR | Edit Album";
+		$this->load->model('album_model');
+		
+		$data['title'] = "cPanel BaleromCR | Editar Album";
+		$data['albumInfo'] = $this->album_model->getAlbumById($albumId);
+		$data['trackList'] = $this->album_model->getSongListById($albumId);
 
 		/*Load the view files*/
 		$this->load->view('dashboard/header', $data);
 		$this->load->view('dashboard/sidebar');
-		//$this->load->view("dashboard/album_edit", $data);
+		$this->load->view("dashboard/albums_edit", $data);
 		$this->load->view('dashboard/footer');
 	}
 
@@ -94,8 +99,6 @@ class Display extends CI_Controller {
 
 		$data['title'] = "cPanel BaleromCR | Albums";
 		$data['albumList'] = $albumList;
-
-
 		return $data;
 	}
 

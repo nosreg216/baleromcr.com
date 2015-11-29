@@ -4,7 +4,8 @@ $(document).ready(function(){
 
 	/* Initialize Thumbnail sliders*/
     $('.carousel').carousel({
-        interval: 10000
+        interval: 10000,
+        wrap: false
     });
 
 

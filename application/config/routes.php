@@ -48,15 +48,25 @@ $route['admin/logout'] = 'Account/logout';
 $route['admin'] = 'Display/dashboard'; // Handles the authentificaction.
 $route['admin/(:any)'] = 'Display/dashboard/$1'; // Displays the Dashboard views.
 
-	// Edit Methods
-$route['admin/albums/edit/(:num)'] = 'Display/album_editor/$1';
-$route['admin/bundle/edit/(:num)'] = 'Display/bundle_editor/$1';
+	// Insert Methods (Class controllers)
+$route['admin/albums/add'] = 'Album/insert/';
+$route['admin/albums/add_track'] = 'Album/insert_track/';
+$route['admin/singles/add'] = 'Song/insert';
+$route['admin/videos/add'] = 'Video/insert';
+$route['admin/bundles/add'] = 'Bundle/insert';
 
 	// Delete Methods (Class controllers)
 $route['admin/albums/delete/(:num)'] = 'Album/delete/$1';
 $route['admin/singles/delete/(:num)'] = 'Song/delete/$1';
 $route['admin/videos/delete/(:num)'] = 'Video/delete/$1';
 $route['admin/bundles/delete/(:num)'] = 'Bundle/delete/$1';
+
+	// Edit Methods
+$route['admin/albums/edit/(:num)'] = 'Display/album_editor/$1';
+$route['admin/singles/edit/(:num)'] = 'Display/album_editor/$1';
+$route['admin/videos/edit/(:num)'] = 'Display/album_editor/$1';
+$route['admin/bundle/edit/(:num)'] = 'Display/bundle_editor/$1';
+
 
 
 /*Debugging*/

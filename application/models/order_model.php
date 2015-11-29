@@ -87,5 +87,10 @@ class Order_model extends CI_Model {
         {
             $this->db->delete('db_order', array('order_token' => $token));
         }
+
+        public function delete_item($item_type, $item_id)
+        {
+         $this->db->delete('db_order_item', array('item_id' => $item_id, 'item_type' => $item_type));   
+        }
 }
 ?>

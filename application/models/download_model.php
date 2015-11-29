@@ -33,6 +33,8 @@ class Download_model extends CI_Model {
         $title = $info->track_title;
         $albumId = $info->track_album;
 
+        $title = str_replace(" ", "_", $title);
+
         $path = "data/music/albums/$albumId/$title.mp3";
         $cover = "data/music/albums/$albumId/cover.png";
 
