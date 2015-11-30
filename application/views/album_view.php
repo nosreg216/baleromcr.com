@@ -34,7 +34,6 @@
 
 <ol class="breadcrumb">
   <li><a href="<?php echo base_url();?>">Inicio</a></li>
-  <li><a href="<?php echo base_url()."balerom/";?>">Albums</a></li>
   <li class="active"><?php echo $title;?> </li>
 </ol>
 
@@ -62,6 +61,10 @@
         </div>
         <div class="col-md-6">
             <div class="list-group">
+                <div class="list-group-item list-group-item-success">
+                    <h4 class="list-group-item-heading">Lista de Canciones</h4>
+                    <p class="list-group-item-text">Puede comprar las canciones por separado dando clic en la etiqueta del precio.</p>               
+                </div>
                 <?php album_song_list($songList)?>
             </div>
         </div>

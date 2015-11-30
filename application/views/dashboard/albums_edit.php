@@ -4,8 +4,9 @@
   <section class="content-header">
     <h1><?php echo $albumInfo->album_title; ?><small>Control panel</small></h1>
     <ol class="breadcrumb">
-      <li><a href="<?php echo base_url()."admin/";?>"><i class="fa fa-music"></i> Inicio</a></li>
-      <li class="active">Albums</li>
+      <li><a href="<?php echo base_url()."admin/";?>"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="<?php echo base_url()."admin/albums";?>">Albums</a></li>
+      <li class="active"><?php echo $albumInfo->album_title; ?></li>
     </ol>
   </section>
 
@@ -66,7 +67,7 @@
             <h3 class="box-title">Editar album</h3>
           </div><!-- /.box-header -->
           <!-- form start -->
-          <form role="form" action="<?php echo base_url()."admin/albums/add"; ?>" enctype="multipart/form-data" method="POST">
+          <form role="form" action="<?php echo base_url()."admin/albums/update/" . $albumInfo->album_id;?>" enctype="multipart/form-data" method="POST">
             <div class="box-body">
                 <div class="col-xs-4">
                   <div class="form-group">

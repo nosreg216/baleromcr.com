@@ -26,7 +26,7 @@ class Order extends CI_Controller {
 		'location' => 'CR',                        							//location code  (ex GB)
 		'returnurl'=> "http:127.0.0.1/baleromcr.com/order/update/$token",	//where to go back when the transaction is done.
 		'returntxt'=> 'Volver al sitio',         							//What is written on the return button in paypal
-		'cancelurl'=> "http:127.0.0.1/baleromcr.com/order/cancel/$token",	//Where to go if the user cancels.
+		'cancelurl'=> "http:127.0.0.1/baleromcr.com/order/update/$token",	//Where to go if the user cancels.
 		'shipping' => 0,		                							//Shipping Cost
 		'custom'   => ''                           							//Custom attribute
 		);
@@ -46,12 +46,10 @@ class Order extends CI_Controller {
         	$pp->addSimpleItem($pp_item);
         }
 
-        /* Cleans the CI Shopping Cart*/
-        $this->cart->destroy();
-
         /* Setup the final checkout form */
 		$data['summary'] = $pp->getCartContentAsHtml();
 		$data['checkout'] = $pp->getCheckoutForm();
+		$data['order_token'] = $token;
 
 		/* Load the view files */
 		$data['title'] = 'Finalizar la Compra';
@@ -99,6 +97,9 @@ class Order extends CI_Controller {
 		/* Prepares the email to be sent*/
 		//$this->email_notify($orderInfo->order_email);
 
+        /* Cleans the CI Shopping Cart*/
+        $this->cart->destroy();
+
 		header("Location: " . base_url() . "order/$token");
 	}
 
@@ -107,9 +108,9 @@ class Order extends CI_Controller {
 		/*Loads the Order data model */
 		$this->load->model('order_model');
 
-		/* Sets the order as complete */
+		/* Deletes the incompleted order */
 		$this->order_model->delete($token);
-
+		header("Location: " . base_url() . "cart");
 	}
 
 	public function email_notify($email = 'nosreg216@outlook.com')
@@ -135,6 +136,8 @@ class Order extends CI_Controller {
 		$this->load->model('order_model');
 		$this->load->model('album_model');
 		$this->load->model('song_model');
+		$this->load->model('video_model');
+		$this->load->model('bundle_model');
 
 		$orderID = $this->order_model->getRealID($orderToken);
 		
@@ -157,23 +160,23 @@ class Order extends CI_Controller {
               	$item->item_name = $info->song_title;
               	break;
               case '4':
-              	$info = $this->album_model->getVideoById($item->item_id);
+              	$info = $this->video_model->getVideoById($item->item_id);
               	$item->item_name = $info->video_title;
               	break;
               case '5':
-              	$info = $this->album_model->getBundleById($item->item_id);
+              	$info = $this->bundle_model->getBundleById($item->item_id);
               	$item->item_name = $info->bundle_title;
               	break;
             }
         }
 
 		/*Set the data for the view*/
-		$data['title'] = "Order de compra #$orderID";
+		$data['title'] = "Orden de compra Nº $orderID";
 		$data['order_token'] = $orderToken;
 		$data['itemList'] = $itemList;
 		
 		/*Load the view files*/
-		$this->load->view('header', $data);
+		$this->load->view('header_mini', $data);
 		$this->load->view('order_display', $data);
 		$this->load->view('footer');
 	}
@@ -205,7 +208,6 @@ class Order extends CI_Controller {
 				case 4: $this->download_model->zip_video($itemId);	break;
 				case 5: $this->download_model->zip_bundle($itemId);	break;
 			}
-			
 		} else {
 			$token = $this->input->post('order_token');
 			header("Location: " . base_url() . "order/$token");

@@ -1,15 +1,14 @@
+/* Do not modify */
 body{
   padding-top: 50px;
+  background-image: url('../img/concrete_seamless.png');
 }
-* {
-  border-radius: 0 !important;
-}
-.navbar-translucident{
-  background-color: rgba(0,0,0,0.5);
-}
-.navbar a{
-  color: #eee !important;
-}
-.thumbnail{
-  padding: 0;
-}
+* {border-radius: 0 !important;}
+.navbar-translucident, .breadcrumb{background-color: rgba(0,0,0,0.35);}
+.navbar a{ color: #eee !important;}
+.navbar a:hover, .navbar a:focus{color: #000 !important;}
+.thumbnail{padding: 0;}
+.breadcrumb a{color: #fff;}
+.breadcrumb>.active {color: #000;}
+/* End of do not modify */
+

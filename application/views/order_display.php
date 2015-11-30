@@ -2,8 +2,8 @@
   <div class="row">
 
     <div class="col-sm-12 col-md-8 col-md-offset-2">
-      <h1 class="page-header"><?php echo $title;?></h1>
-      <div class="panel panel-default">
+      <h1 class="page-header"><a href="<?php echo base_url();?>">Baleromcr.com</a> / <?php echo $title;?></h1>
+      <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title"><strong>Detalle de la orden</strong></h3>
         </div>
@@ -12,6 +12,7 @@
           <thead>
             <td><strong>Producto</strong></td>
             <td><strong>Titulo</strong></td>
+            <td><strong>Descargas</strong></td>
           </thead>
           <tbody>
           <?php 
@@ -53,6 +54,7 @@
 
               echo "<td>". $type."</td>";
               echo "<td>". $item->item_name."</td>";
+              echo "<td>". $downloaded .' / '. ITEM_MAX_DOWNLOADS ."</td>";
               echo "<td class='text-right'>". $btn ."</td>";
               echo "</form>";
               echo "</tr>";

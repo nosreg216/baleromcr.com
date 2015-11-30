@@ -30,9 +30,8 @@ class Download_model extends CI_Model {
         $info = $query->row(); 
 
         // Define Zip Parameters
-        $title = $info->track_title;
         $albumId = $info->track_album;
-
+        $title = $info->track_title;
         $title = str_replace(" ", "_", $title);
 
         $path = "data/music/albums/$albumId/$title.mp3";
@@ -56,6 +55,8 @@ class Download_model extends CI_Model {
 
         // Define Zip Parameters
         $title = $info->song_title;
+        $title = str_replace(" ", "_", $title);
+
         $path = "data/music/songs/$songId/$title.mp3";
         $cover = "data/music/songs/$songId/cover.png";
 
@@ -76,10 +77,11 @@ class Download_model extends CI_Model {
         $info = $query->row(); 
 
         // Define Zip Parameters
-        $title = $info->song_title;
+        $title = $info->video_title;
+        $title = str_replace(" ", "_", $title);
 
-        $path = "data/music/songs/$videoId/$title.$format";
-        $cover = "data/music/songs/$videoId/cover.png";
+        $path = "data/music/videos/$videoId/$title.mp4";
+        $cover = "data/music/videos/$videoId/cover.png";
 
         // Add songs to the file
         $this->zip->read_file($path);

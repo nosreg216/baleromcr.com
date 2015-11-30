@@ -74,32 +74,29 @@ class Cart extends CI_Controller {
 		    'type'    => '3'
 		);
 		$this->cart->insert($data);
-		//header("Location: " . base_url() . "song/$song_id?ac=1");
-		//header("Location: " . base_url() . "cart");
+		header("Location: " . base_url() . "cart");
 	}
 
-	public function add_video($songId){
+	public function add_video($videoId){
 		/*
 		Retrieves the song information from the database
 		@params: ID of the song.
-		@returns: Array of stdClass Objects (Song)
+		@returns: Array of stdClass Objects (Video)
 		*/
-		$this->load->model('song_model');
-		$songInfo = $this->song_model->getSongById($songId);
+		$this->load->model('video_model');
+		$videoInfo = $this->video_model->getVideoById($videoId);
 
 		/* Insert the data to the cart session */
 		$data = array(
-		    'id'      => $songId,
+		    'id'      => $videoId,
 		    'qty'     => 1,
-		    'price'   => $songInfo->song_price,
-		    'name'    => $songInfo->song_title,
-		    'type'    => '3'
+		    'price'   => $videoInfo->video_price,
+		    'name'    => $videoInfo->video_title,
+		    'type'    => '4'
 		);
 		
-		
 		$this->cart->insert($data);
-		//header("Location: " . base_url() . "song/$song_id?ac=1");
-		//header("Location: " . base_url() . "cart");
+		header("Location: " . base_url() . "cart");
 	}
 
 	public function add_bundle($songId){

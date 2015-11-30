@@ -4,7 +4,7 @@
   <section class="content-header">
     <h1>Videos<small>Control panel</small></h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-music"></i> Inicio</a></li>
+      <li><a href="<?php echo base_url()."admin/";?>"><i class="fa fa-home"></i> Inicio</a></li>
       <li class="active">Videos</li>
     </ol>
   </section>
@@ -23,12 +23,12 @@
           </div><!-- /.box-header -->
 
           <!-- form start -->
-          <form role="form" action="add" method="POST">
+          <form role="form" action="<?php echo base_url()."admin/videos/add"; ?>" enctype="multipart/form-data" method="POST">
             <div class="box-body">
 
               <div class="form-group">
                 <label for="title">Titulo del Video</label>
-                <input type="text" class="form-control" name="title" placeholder="Nombre del video" required>
+                <input type="text" class="form-control" name="video_title" placeholder="Nombre del video" required>
               </div>
 
               <div class="row">
@@ -36,14 +36,14 @@
                   <div class="form-group">
                     <label for="title">Año</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="ej: 2015" required>
+                      <input type="text" class="form-control" name="video_year" placeholder="ej: 2015" required>
                     </div>
                   </div>
                 </div>
                 <div class="col-xs-9">
                   <div class="form-group">
-                    <label for="file_song">Archivo (.mp4)</label>
-                    <input type="file" name="file_song" required>
+                    <label for="file_video">Archivo (.mp4)</label>
+                    <input type="file" name="video_file" accept=".mp4" required>
                   </div>
                 </div>
               </div>
@@ -54,14 +54,14 @@
                     <label for="title">Precio</label>
                     <div class="input-group">
                       <span class="input-group-addon">$</span>
-                      <input type="text" class="form-control" required>
+                      <input type="text" name="video_price" class="form-control" required>
                     </div>
                   </div>
                 </div>
                 <div class="col-xs-9">
                   <div class="form-group">
                     <label for="file_cover">Portada (.png)</label>
-                    <input type="file" name="file_cover" required>
+                    <input type="file" name="file_cover" accept=".png" required>
                   </div>
                 </div>
               </div>
@@ -79,38 +79,34 @@
 
       <!-- right column -->
       <div class="col-xs-6">
-        <div class="box box-danger">
+        <div class="box box-success box-scroll">
           <div class="box-header">
-            <h3 class="box-title">Todos los Videos</h3>
+            <h3 class="box-title">Todos los Albums</h3>
           </div><!-- /.box-header -->
-
-          <div class="box-body table-responsive no-padding">
+          <div class="box-body table-responsive no-padding" >
             <table class="table table-hover">
               <tr>
                 <th>Titulo</th>
-                <th>Año</th>
-                <th>Eliminar</th>
+                <th>Precio</th>
+                <th>Opciones</th>
               </tr>
-              <tr>
-                <td>John Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Alexander Pierce</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Bob Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
-              <tr>
-                <td>Mike Doe</td>
-                <td>2014</td>
-                <td><a href="" class="btn btn-xs btn-danger">Eliminar</a></td>
-              </tr>
+              <?php 
+                foreach ($videoList as $video) {
+
+                  $id = $video->video_id;
+                  $title = $video->video_title;
+                  $price = $video->video_price;
+                  $edit = base_url() . "admin/videos/edit/$id";
+                  $delete = base_url() . "admin/videos/delete/$id";
+
+                  echo "<tr>";
+                  echo "<td>$title</td>";
+                  echo "<td>$ $price .00</td>";
+                  echo "<td><a href='$edit' class='btn btn-xs btn-warning'>Editar</a>";
+                  echo "&nbsp;<a href='$delete' class='btn btn-xs btn-danger'>Borrar</a></td>";
+                  echo "</tr>";
+                }
+              ?>
             </table>
           </div><!-- /.box-body -->
           <div class="box-footer">
@@ -118,8 +114,6 @@
           </div>
         </div><!-- /.box -->
       </div>
-
-
     </div>   <!-- /.row -->
   </section><!-- /.content -->
 </div><!-- /.content-wrapper -->

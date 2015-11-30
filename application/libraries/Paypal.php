@@ -90,19 +90,19 @@ public function __construct($config=""){
     //==> Returns a summary list of the cart content <==//
     //==================================================//
     public function getCartContentAsHtml($hidetotal=0){
-        $content='<ul id="cartcontent">'; $total=0; $count = 0;
+        $content='<ul id="cartcontent" class="list-group">'; $total=0; $count = 0;
         $cpt=1;
         if(!empty($this->items)){foreach($this->items as $item){
           $amount = $item['quantity']*$item['price'];
-          $content.='<li class="cartitem">'.$item['quantity'].' x "'.$item['name'].'" at '.$this->cursymbol.''.$item['price'];
-          if($item['shipping']>0)$content.= ' + '.$this->cursymbol.''.$item['shipping'].' shipping ';
-          $content.=' for '.$this->cursymbol.''.$amount;
+
+          $content.='<li class="list-group-item">'.$item['quantity'].' x "'.$item['name']
+          .'"<span class="badge">'. $this->cursymbol.''.$amount .'</span>';
           $content.='</li>';
           $total+=$amount;
           $count+=$item['quantity'];
           $cpt++;
-       }}	
-       if($hidetotal!=1){ $content.='<li class="carttotal">Total: '.$count.' Items for '.$this->cursymbol.''.$total.'</li>'; }
+       }}
+       $content.='<li class="list-group-item list-group-item-success">Total: '.$count.' Elementos <span class="badge">'.$this->cursymbol.''.$total.'</span></li>';
        $content.='</ul>';
        return $content;
     }
@@ -150,7 +150,7 @@ public function __construct($config=""){
 
        //==> The submit button, (you can specify here your own button) <==//
        $form.='
-         <input id="ppcheckoutbtn" type="submit" value="Checkout" class="btn btn-success btn-large" />
+         <input id="ppcheckoutbtn" type="submit" value="Ordenar" class="btn btn-success btn-large" />
        </form>';
 
        return $form;

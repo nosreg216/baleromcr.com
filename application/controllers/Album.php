@@ -10,8 +10,6 @@ class Album extends CI_Controller {
 	/* Displays the information of an album*/
 	public function view_album($albumId = 1)
 	{
-
-		
 		/*
 		Retrieves the album information from the database.
 		@params: ID of the album.
@@ -24,7 +22,7 @@ class Album extends CI_Controller {
 		@params: ID of the album.
 		@returns: Array of Objects (Song).
 		*/
-		$songList = $this->album_model->getSongListById($albumId);
+		$songList = $this->album_model->getTrackListById($albumId);
 
 		/* Set the data for the view */
 		$data['title'] = $albumInfo->album_title;
@@ -37,6 +35,7 @@ class Album extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	####################################################################### # Flagged for deleteion
 	public function view_list()
 	{
 		$albumList = $this->album_model->getAlbumList();
@@ -82,6 +81,8 @@ class Album extends CI_Controller {
 			$config['upload_path'] = $path;
 			$config['allowed_types'] = 'png';
 			$config['file_name'] = 'cover.png';
+			$config['overwrite'] = TRUE;
+
 			$this->upload->initialize($config);
 	        return $this->upload->do_upload('file_cover');
 		}
@@ -154,4 +155,22 @@ class Album extends CI_Controller {
 			$this->upload->initialize($config);
 	        $this->upload->do_upload('song_file');
 		}
+
+
+	public function update($album_id)
+	{
+		$data = array(
+			'album_id' => $album_id,
+			'album_price' => $this->input->post('album_price')
+		 );
+
+		$this->album_model->update($data);
+		$path = "data/music/albums/$album_id";
+		
+		/* Load the Upload class */
+		$this->load->library('upload');
+		$this->upload_cover($path);
+
+		header("Location: " . base_url() . "admin/albums");
+	}
 }

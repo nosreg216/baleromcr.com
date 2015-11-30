@@ -7,6 +7,18 @@ class Order_model extends CI_Model {
             return $query->row(); 
 		}
 
+        public function request_all()
+        {   
+            $query = $this->db->get('db_order');
+            return $query->result(); 
+        }
+
+        public function request_range($startDate, $endDate)
+        {   
+            $query = $this->db->get('db_order');
+            return $query->result(); 
+        }
+
         /*
         @description: Get the list of items the Order.
         @param: Order Token (public ID)
@@ -36,7 +48,7 @@ class Order_model extends CI_Model {
         public function create($email)
         {   
             /* Default order ID (First Order) */
-            $lastId = 1024;
+            $lastId = 1;
 
             /* Get the ID of the previous order */
             $this->db->limit(1);

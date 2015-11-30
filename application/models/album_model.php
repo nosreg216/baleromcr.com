@@ -12,7 +12,7 @@ class Album_model extends CI_Model {
     public function getAlbumList(){
         $this->db->order_by('album_year DESC');
         $query = $this->db->get('db_album');
-        return $query->result_array();
+        return $query->result();
     }
 
     /* Get the album information from the database */
@@ -23,7 +23,7 @@ class Album_model extends CI_Model {
     }
 
     /* Get the song list from the database */
-    public function getSongListById($albumId){
+    public function getTrackListById($albumId){
         $this->db->from('db_album_track');
         $this->db->where(array('track_album' => $albumId));
         $query = $this->db->get();
@@ -96,6 +96,11 @@ class Album_model extends CI_Model {
     public function delete($id)
     {
     	$this->db->delete('db_album', array('album_id' => $id));
+    }
+
+    public function update($data)
+    {
+        $this->db->update('db_album', $data, array('album_id' => $data['album_id']));  
     }
 }
 ?>

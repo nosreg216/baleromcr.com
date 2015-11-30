@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/full-slider.css">
   <link rel="shortcut icon" href="<?php echo base_url();?>assets/img/favicon.ico">
 </head>
-<body class="index">
+<body>
 
 <nav class="navbar navbar-fixed-top navbar-translucident">
   <div class="container-fluid">
@@ -43,7 +43,12 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Biografia</a></li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-file"></span>
+            Biografia
+          </a>
+        </li>
         <li>
           <a href="<?php echo base_url();?>cart">
             <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -52,6 +57,7 @@
           </a>
         </li>
       </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

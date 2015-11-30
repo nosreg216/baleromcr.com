@@ -4,7 +4,7 @@
   <section class="content-header">
     <h1>Albums<small>Control panel</small></h1>
     <ol class="breadcrumb">
-      <li><a href="<?php echo base_url()."admin/";?>"><i class="fa fa-music"></i> Inicio</a></li>
+      <li><a href="<?php echo base_url()."admin/";?>"><i class="fa fa-home"></i> Inicio</a></li>
       <li class="active">Albums</li>
     </ol>
   </section>
@@ -87,9 +87,9 @@
               <?php 
                 foreach ($albumList as $album) {
 
-                  $id = $album['album_id'];
-                  $title = $album['album_title'];
-                  $year = $album['album_year'];
+                  $id = $album->album_id;
+                  $title = $album->album_title;
+                  $year = $album->album_year;
                   $edit = base_url() . "admin/albums/edit/$id";
                   $delete = base_url() . "admin/albums/delete/$id";
 

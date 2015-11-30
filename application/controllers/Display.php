@@ -13,10 +13,16 @@ class Display extends CI_Controller {
 	public function page($page = 'index'){
 	
 		/* Load Data Models */		
+		$this->load->model('banner_model');
 		$this->load->model('album_model');
+		$this->load->model('song_model');
+		$this->load->model('video_model');
 
 		/* Get all content Lists */
+		$data['banner_list'] = $this->banner_model->get_all();
 		$data['albumList'] = $this->album_model->getAlbumList();
+		$data['songList'] = $this->song_model->getSongList();
+		$data['videoList'] = $this->video_model->getVideoList();
 
 		/*Set the data for the view*/
 		$data['title'] = "BaleromCR | Tienda";
@@ -57,12 +63,40 @@ class Display extends CI_Controller {
 		
 		$data['title'] = "cPanel BaleromCR | Editar Album";
 		$data['albumInfo'] = $this->album_model->getAlbumById($albumId);
-		$data['trackList'] = $this->album_model->getSongListById($albumId);
+		$data['trackList'] = $this->album_model->getTrackListById($albumId);
 
 		/*Load the view files*/
 		$this->load->view('dashboard/header', $data);
 		$this->load->view('dashboard/sidebar');
 		$this->load->view("dashboard/albums_edit", $data);
+		$this->load->view('dashboard/footer');
+	}
+
+	public function song_editor($songId)
+	{
+		$this->load->model('song_model');
+		
+		$data['title'] = "cPanel BaleromCR | Editar Sencillo";
+		$data['songInfo'] = $this->song_model->getSongById($songId);
+
+		/*Load the view files*/
+		$this->load->view('dashboard/header', $data);
+		$this->load->view('dashboard/sidebar');
+		$this->load->view("dashboard/singles_edit", $data);
+		$this->load->view('dashboard/footer');
+	}
+
+	public function video_editor($videoId)
+	{
+		$this->load->model('video_model');
+		
+		$data['title'] = "cPanel BaleromCR | Editar Video";
+		$data['videoInfo'] = $this->video_model->getVideoById($videoId);
+
+		/*Load the view files*/
+		$this->load->view('dashboard/header', $data);
+		$this->load->view('dashboard/sidebar');
+		$this->load->view("dashboard/videos_edit", $data);
 		$this->load->view('dashboard/footer');
 	}
 
@@ -95,36 +129,27 @@ class Display extends CI_Controller {
 	{
 		/*Set the data for the view*/
 		$this->load->model('album_model');
-		$albumList = $this->album_model->getAlbumList();
-
+		$data['albumList'] = $this->album_model->getAlbumList();
 		$data['title'] = "cPanel BaleromCR | Albums";
-		$data['albumList'] = $albumList;
 		return $data;
 	}
 
 	public function singles()
 	{
 		/*Set the data for the view*/
-		$this->load->model('album_model');
-		$albumList = $this->album_model->getAlbumList();
-
-		$data['title'] = "cPanel BaleromCR | Albums";
-		$data['albumList'] = $albumList;
-
-
+		$this->load->model('song_model');
+		$data['songList'] = $this->song_model->getSongList();
+		$data['title'] = "cPanel BaleromCR | Sencillos";
 		return $data;
 	}
 
 	public function videos()
 	{
 		/*Set the data for the view*/
-		$this->load->model('album_model');
-		$albumList = $this->album_model->getAlbumList();
-
-		$data['title'] = "cPanel BaleromCR | Albums";
-		$data['albumList'] = $albumList;
-
-
+		$this->load->model('video_model');
+		$videoList = $this->video_model->getVideoList();
+		$data['title'] = "cPanel BaleromCR | Videos";
+		$data['videoList'] = $videoList;
 		return $data;
 	}
 

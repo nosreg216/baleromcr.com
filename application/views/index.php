@@ -26,21 +26,14 @@
 	<div id="myCarousel" class="carousel slide">
 	    <!-- Wrapper for Slides -->
 	    <div class="carousel-inner">
-            <div class="item active">
-        		<video autoplay muted>
-        		  <source src="data/banners/video_1.mp4" type="video/mp4">
-        		</video>
-            </div>
-            <div class="item">
-                <img src="data/banners/wallpaper_1.jpg">
-            </div>
+	    	<?php display_all_banners($banner_list) ?>
 	    </div>
 	</div>
 </div>
 
 <div class="container-fluid">
-	<a class="right carousel-control" href="#myCarousel" data-slide="next">
-	    <span class="icon-next"></span>
+	<a class="right carousel-control" href="#myCarousel" data-slide="prev">
+	    <span class="icon-prev"></span>
 	</a>
 	<!-- Acordeon -->
 	<div class="col-md-3">
@@ -69,7 +62,7 @@
 		    </div>
 		    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 		      <div class="panel-body">
-                <?php album_list_thumbnail($albumList); ?>
+                <?php song_list_thumbnail($songList); ?>
 		      </div>
 		    </div>
 		  </div>
@@ -82,7 +75,7 @@
 		      </h4>
 		    </div>
 		    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <?php album_list_thumbnail($albumList); ?>
+                <?php video_list_thumbnail($videoList); ?>
 		      </div>
 		    </div>
 		  </div>
