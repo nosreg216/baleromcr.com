@@ -5,31 +5,12 @@ $songId = $songInfo->song_id;
 $title = $songInfo->song_title;
 $year = $songInfo->song_year;
 $price = $songInfo->song_price;
+$desc = $songInfo->song_desc;
 $cover = base_url()."data/music/songs/$songId/cover.png";
 
 ?>
-
-<!-- Page-Specific  CSS -->
-<style type="text/css">
-    .album-banner {
-        position: relative;
-        height: 50vh;
-        margin-top: -50px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 25%;
-        background-image: url(<?php echo $cover; ?>);
-    }
-    .album-banner h1{
-        position: absolute;
-        font-size: 5em;
-        color: #eee;
-        bottom: 0;
-        right: 0;
-    }
-</style>
 <!--================================================================================================================-->
-<header class="album-banner">
+<header class="cover" style="background-image: url(<?php echo $cover; ?>);">
     <h1><?php echo $title . ' ' .$year; ?></h1>
 </header>
 
@@ -61,7 +42,20 @@ $cover = base_url()."data/music/songs/$songId/cover.png";
             <img class="img-responsive"
             src="<?php echo $cover;?>" alt="404">
         </div>
+        <div class="col-md-6">
+            <div class="well">
+                <?php echo "$desc"; ?>
+            </div>
+        </div>
     </div>
     <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-header">Otros Sencillos de Balerom</h3>
+            <div class="thumnb-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 2}'>
+                <?php song_list_thumbnail($songList); ?>
+            </div>
+        </div>
+    </div>
     <!-- /.row -->
 </div><!-- /.container -->

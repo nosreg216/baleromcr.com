@@ -12,3 +12,20 @@ body{
 .breadcrumb>.active {color: #000;}
 /* End of do not modify */
 
+/* Album/Song/Video Cover styles */
+.cover {
+    position: relative;
+    height: 50vh;
+    margin-top: -50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    
+}
+.cover h1{
+    position: absolute;
+    font-size: 5em;
+    color: #eee;
+    bottom: 0;
+    right: 0;
+}

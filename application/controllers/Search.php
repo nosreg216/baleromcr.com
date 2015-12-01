@@ -6,7 +6,7 @@ class Search extends CI_Controller {
 		
 		/* Prevent SQL injection. */
 		$search = html_escape($_GET['s']);
-		$search = trim($search);
+		$search = cleanString(trim($search));
 
 		// Get the album search results from the database
 		$query = $this->db->like('album_title', $search);

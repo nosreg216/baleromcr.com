@@ -8,7 +8,6 @@ class Song extends CI_Controller {
     }
 
 	public function view_song($songId = 0) {
-
 		/*
 		Retrieves the song information from the database
 		@params: ID of the song.
@@ -16,9 +15,22 @@ class Song extends CI_Controller {
 		*/
 		$songInfo = $this->song_model->getSongById($songId);
 
+		/* Element not found */
+		if ($songInfo == null) {
+			header("Location: " . base_url());
+			break;
+		}
+
+		/*
+		Retrieves the song list from the database
+		@returns: Array of stdClass Objects (Song)
+		*/
+		$songList = $this->song_model->getSongList();
+
 		/* Set the data for the view */
 		$data['title'] = $songInfo->song_title . " - Balerom!";
 		$data['songInfo'] = $songInfo;
+		$data['songList'] = $songList;
 		
 		/* Load the view files */
 		$this->load->view('header', $data);
@@ -29,9 +41,9 @@ class Song extends CI_Controller {
 	public function insert()
 	{
 		$song_data = array(
-			'song_title' => $this->input->post('song_title'),
-			'song_year' => $this->input->post('song_year'),
-			'song_price' => $this->input->post('song_price')
+			'song_title' => cleanString($this->input->post('song_title')),
+			'song_year' => cleanString($this->input->post('song_year')),
+			'song_price' => cleanString($this->input->post('song_price'))
 		);
 
 		/* Insert the song and retrieve the song ID */
@@ -59,6 +71,7 @@ class Song extends CI_Controller {
 	{
 		$data = array(
 			'song_id' => $song_id,
+			'song_title' => $this->input->post('song_title'),
 			'song_price' => $this->input->post('song_price')
 		 );
 

@@ -31,6 +31,12 @@
                 <input type="text" class="form-control" name="video_title" placeholder="Nombre del video" required>
               </div>
 
+              <div class="form-group">
+                <label for="textArea">Descripción del video</label>
+                <textarea class="form-control" rows="3" name="video_desc"></textarea>
+                <span class="help-block">Una breve descripción sobre qué trata el video que se mostrará bajo la portada.</span>
+              </div>
+
               <div class="row">
                <div class="col-xs-3">
                   <div class="form-group">
@@ -41,7 +47,7 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_video">Archivo (.mp4)</label>
                     <input type="file" name="video_file" accept=".mp4" required>
                   </div>
@@ -59,17 +65,17 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_cover">Portada (.png)</label>
                     <input type="file" name="file_cover" accept=".png" required>
                   </div>
                 </div>
               </div>
-              <p class="help-block">El nombre de los archivos será ajustado automaticamente.</p>
             </div><!-- /.box-body -->
 
             <div class="box-footer">
-              <button type="submit" class="btn btn-default">Agregar</button>
+              <p class="help-block pull-left">El nombre de los archivos será ajustado automaticamente.</p>
+              <button type="submit" class="btn btn-default pull-right">Agregar</button>
             </div>
           </form>
 

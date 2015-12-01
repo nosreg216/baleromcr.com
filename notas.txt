@@ -20,3 +20,9 @@ Baja Prioridad:
 
 Eliminar una cancion de album no lo elimina de las ordenes activas
 http://127.0.0.1/baleromcr.com/order/6d70cb65d15211726dcce4c0e971e21c
+
+
+
+Acceso:
+u:	admin@baleromcr.com
+p:	Pz#26Js%N8Cc

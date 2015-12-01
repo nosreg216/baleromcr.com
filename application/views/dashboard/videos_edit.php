@@ -23,6 +23,19 @@
           <!-- form start -->
           <form role="form" action="<?php echo base_url()."admin/videos/update/" . $videoInfo->video_id;?>" enctype="multipart/form-data" method="POST">
             <div class="box-body">
+              
+              <div class="form-group">
+                <label for="title">Titulo del Video</label>
+                <input type="text" class="form-control" name="video_title" value="<?php echo $videoInfo->video_title;?>">
+              </div>
+
+              <div class="form-group">
+                <label for="textArea">Descripción del video</label>
+                <textarea class="form-control" rows="3" name="video_desc"><?php echo $videoInfo->video_desc;?></textarea>
+                <span class="help-block">Una breve descripción sobre qué trata el video que se mostrará bajo la portada.</span>
+              </div>
+
+              <div class="row">
                 <div class="col-xs-4">
                   <div class="form-group">
                     <label for="title">Precio del video </label>
@@ -33,11 +46,12 @@
                   </div>
                 </div>
                 <div class="col-xs-8">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_cover">Portada (.png)</label>
                     <input type="file" name="file_cover" accept=".png">
                   </div>
                 </div>
+              </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
               <p class="help-block pull-left">Todos los precios estan en dólares estadounidenses. (USD)</p>
@@ -50,6 +64,9 @@
         </a>
       </div><!-- /.col -->
 
+      <div class="col-md-6">
+          <img class="img-responsive" src="<?php echo base_url()."data/music/videos/" .$videoInfo->video_id."/cover.png";?>" alt="404">
+      </div>
 
     </div>   <!-- /.row -->
   </section><!-- /.content -->

@@ -8,7 +8,6 @@ $(document).ready(function(){
         wrap: false
     });
 
-
 	/* Initialize Thumbnail sliders*/
 	$('.thumnb-slider').slick({
 	  centerMode: false,

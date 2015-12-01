@@ -22,9 +22,16 @@
           <!-- form start -->
           <form role="form" action="<?php echo base_url()."admin/albums/add"; ?>" enctype="multipart/form-data" method="POST">
             <div class="box-body">
+
               <div class="form-group">
                 <label for="title">Titulo del album</label>
                 <input type="text" class="form-control" name="album_title" placeholder="Nombre del album" required>
+              </div>
+
+              <div class="form-group">
+                <label for="textArea">Descripción del album</label>
+                <textarea class="form-control" rows="3" name="album_desc"></textarea>
+                <span class="help-block">Una breve descripción sobre qué trata el albúm que se mostrará bajo la portada.</span>
               </div>
 
               <div class="row">
@@ -37,7 +44,7 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_song">Lista de Canciones (.txt)</label>
                     <input type="file" name="file_songlist" accept=".txt" required>
                   </div>
@@ -55,12 +62,13 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_cover">Portada (.png)</label>
                     <input type="file" name="file_cover" accept=".png" required>
                   </div>
                 </div>
               </div>
+
             </div><!-- /.box-body -->
             <div class="box-footer">
               <p class="help-block pull-left">El nombre de los archivos será ajustado automaticamente.</p>

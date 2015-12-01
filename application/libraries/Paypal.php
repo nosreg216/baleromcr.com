@@ -95,14 +95,14 @@ public function __construct($config=""){
         if(!empty($this->items)){foreach($this->items as $item){
           $amount = $item['quantity']*$item['price'];
 
-          $content.='<li class="list-group-item">'.$item['quantity'].' x "'.$item['name']
+          $content.='<li class="list-group-item" style="border: none;">'.$item['quantity'].' x "'.$item['name']
           .'"<span class="badge">'. $this->cursymbol.''.$amount .'</span>';
           $content.='</li>';
           $total+=$amount;
           $count+=$item['quantity'];
           $cpt++;
        }}
-       $content.='<li class="list-group-item list-group-item-success">Total: '.$count.' Elementos <span class="badge">'.$this->cursymbol.''.$total.'</span></li>';
+       $content.='<li class="list-group-item list-group-item-info">Total: '.$count.' Elementos <span class="badge">'.$this->cursymbol.''.$total.'</span></li>';
        $content.='</ul>';
        return $content;
     }

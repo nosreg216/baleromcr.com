@@ -155,16 +155,18 @@ class Display extends CI_Controller {
 
 	public function bundles()
 	{
+
+	}
+/*====================================================================================================================*/
+
+	public function banners()
+	{
 		/*Set the data for the view*/
-		$this->load->model('album_model');
-		$albumList = $this->album_model->getAlbumList();
-
-		$data['title'] = "cPanel BaleromCR | Albums";
-		$data['albumList'] = $albumList;
-
-
+		$this->load->model('banner_model');
+		$bannerList = $this->banner_model->get_all();
+		$data['title'] = "cPanel BaleromCR | Banners";
+		$data['bannerList'] = $bannerList;
 		return $data;
 	}
-
 
 }

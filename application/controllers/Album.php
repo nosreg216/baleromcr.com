@@ -17,17 +17,31 @@ class Album extends CI_Controller {
 		*/
 		$albumInfo = $this->album_model->getAlbumById($albumId);
 
+		/* Element not found */
+		if ($albumInfo == null) {
+			header("Location: " . base_url());
+			break;
+		}
+
 		/*
 		Retrieves the trackist of a given album.
 		@params: ID of the album.
 		@returns: Array of Objects (Song).
 		*/
 		$songList = $this->album_model->getTrackListById($albumId);
+		
+		/*
+		Retrieves the trackist of a given album.
+		@params: ID of the album.
+		@returns: Array of Objects (Song).
+		*/
+		$albumList = $this->album_model->getAlbumList();
 
 		/* Set the data for the view */
 		$data['title'] = $albumInfo->album_title;
 		$data['albumInfo'] = $albumInfo;
 		$data['songList'] = $songList;
+		$data['albumList'] = $albumList;
 
 		/* Load the view files */
 		$this->load->view('header', $data);
@@ -52,9 +66,10 @@ class Album extends CI_Controller {
 	public function insert()
 	{
 		$album_data = array(
-			'album_title' => $this->input->post('album_title'),
-			'album_year' => $this->input->post('album_year'),
-			'album_price' => $this->input->post('album_price')
+			'album_title' => cleanString($this->input->post('album_title')),
+			'album_year' => cleanString($this->input->post('album_year')),
+			'album_price' => cleanString($this->input->post('album_price')),
+			'album_desc' => $this->input->post('album_desc')
 		);
 
 		/* Insert the album and retrieve the album ID */
@@ -123,9 +138,9 @@ class Album extends CI_Controller {
 	{
 		$track_number = $this->input->post('track_number');
 		$track_data = array(
-			'track_title' => $this->input->post('track_title'),
-			'track_album' => $this->input->post('track_album'),
-			'track_price' => $this->input->post('track_price')
+			'track_title' => cleanString($this->input->post('track_title')),
+			'track_album' => cleanString($this->input->post('track_album')),
+			'track_price' => cleanString($this->input->post('track_price'))
 		);
 
 		/* Build the file name */
@@ -159,12 +174,13 @@ class Album extends CI_Controller {
 
 	public function update($album_id)
 	{
-		$data = array(
+		$album_data = array(
 			'album_id' => $album_id,
-			'album_price' => $this->input->post('album_price')
-		 );
+			'album_price' => cleanString($this->input->post('album_price')),
+			'album_desc' => $this->input->post('album_desc')
+		);
 
-		$this->album_model->update($data);
+		$this->album_model->update($album_data);
 		$path = "data/music/albums/$album_id";
 		
 		/* Load the Upload class */

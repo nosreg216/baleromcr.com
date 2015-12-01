@@ -2,9 +2,33 @@
 class Banner_model extends CI_Model {
 
     /* Default methods */
-    public function add($data = null)
+    public function add($banner_data = null)
     {    
-        return $this->db->insert('db_banners', $data);
+        /* Default ID (First) */
+        $banner_id = 0;
+
+        /* Get the ID of the last inserted banner */
+        $this->db->limit(1);
+        $this->db->select('banner_id');
+        $this->db->order_by('banner_id DESC');
+        $query = $this->db->get('db_banners');
+
+        /* Validate if table was empty */
+        if ($query->num_rows() != 0) {
+            $result = $query->row();
+            $banner_id = $result->banner_id + 1;
+        }
+        
+        /* Define the data before insert */
+        $data['banner_id'] = $banner_id;
+        $data['banner_type'] = $banner_data['banner_type'];
+        $data['banner_desc'] = $banner_data['banner_desc'];
+
+        /* Perform the actual insert */
+        $this->db->insert('db_banners', $data);
+
+        /* Returns the new banner's ID*/
+        return $banner_id;
     }
 
     public function delete($id)

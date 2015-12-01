@@ -69,6 +69,12 @@
           <!-- form start -->
           <form role="form" action="<?php echo base_url()."admin/albums/update/" . $albumInfo->album_id;?>" enctype="multipart/form-data" method="POST">
             <div class="box-body">
+              <div class="form-group">
+                <label for="textArea">Descripción del album</label>
+                <textarea class="form-control" rows="3" name="album_desc"><?php echo $albumInfo->album_desc; ?></textarea>
+                <span class="help-block">Una breve descripción sobre qué trata el albúm que se mostrará bajo la portada.</span>
+              </div>
+              <div class="row">
                 <div class="col-xs-4">
                   <div class="form-group">
                     <label for="title">Precio del Album </label>
@@ -79,10 +85,11 @@
                   </div>
                 </div>
                 <div class="col-xs-8">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_cover">Portada (.png)</label>
                     <input type="file" name="file_cover" accept=".png">
                   </div>
+                </div>
                 </div>
             </div><!-- /.box-body -->
             <div class="box-footer">

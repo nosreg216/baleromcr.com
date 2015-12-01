@@ -17,6 +17,12 @@ class Video extends CI_Controller {
 		*/
 		$videoInfo = $this->video_model->getVideoById($videoId);
 
+		/* Element not found */
+		if ($videoInfo == null) {
+			header("Location: " . base_url());
+			break;
+		}
+
 		/* Set the data for the view */
 		$data['title'] = $videoInfo->video_title . " - Balerom!";
 		$data['videoInfo'] = $videoInfo;
@@ -61,6 +67,7 @@ class Video extends CI_Controller {
 	{
 		$data = array(
 			'video_id' => $video_id,
+			'video_title' => $this->input->post('video_title'),
 			'video_price' => $this->input->post('video_price')
 		 );
 

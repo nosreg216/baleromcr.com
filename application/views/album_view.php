@@ -4,31 +4,11 @@
     $title = $albumInfo->album_title;
     $year = $albumInfo->album_year;
     $price = $albumInfo->album_price;
+    $desc = $albumInfo->album_desc;
     $cover = base_url()."data/music/albums/$albumId/cover.png";
 ?>
-
-<!-- Page-Specific  CSS -->
-<style type="text/css">
-    .album-banner {
-        position: relative;
-        height: 50vh;
-        margin-top: -50px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 25%;
-        background-image: url(<?php echo $cover; ?>);
-    }
-    .album-banner h1{
-        position: absolute;
-        font-size: 5em;
-        color: #eee;
-        bottom: 0;
-        right: 0;
-    }
-</style>
 <!--================================================================================================================-->
-
-<header class="album-banner">
+<header class="cover" style="background-image: url(<?php echo $cover; ?>);">
     <h1><?php echo $title . ' ' .$year; ?></h1>
 </header>
 
@@ -70,11 +50,20 @@
         </div>
     </div>
     <!-- /.row -->
-
     <hr>
-
     <div class="row">
-        
+        <div class="col-sm-12">
+            <div class="well">
+                <?php echo "$desc"; ?>
+            </div>
+        </div>
     </div>
-
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-header">Otros Álbumes de Balerom</h3>
+            <div class="thumnb-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 2}'>
+                <?php album_list_thumbnail($albumList); ?>
+            </div>
+        </div>
+    </div>
 </div><!-- /.container -->

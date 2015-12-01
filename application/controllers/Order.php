@@ -20,7 +20,7 @@ class Order extends CI_Controller {
         $token = md5($orderId);
 
 		$settings = array(
-		'business' => 'nosreg216@gmail.com',       							//paypal email address
+		'business' => 'balerom@hotmail.com',       							//paypal email address
 		'currency' => 'USD',                       							//paypal currency
 		'cursymbol'=> '&dollar;',                   						//currency symbol
 		'location' => 'CR',                        							//location code  (ex GB)

@@ -74,7 +74,9 @@ $route['admin/singles/edit/(:num)'] = 'Display/song_editor/$1';
 $route['admin/videos/edit/(:num)'] = 'Display/video_editor/$1';
 #$route['admin/bundle/edit/(:num)'] = 'Display/bundle_editor/$1';
 
-
+	// General Page Administration
+$route['admin/banners/add'] = 'Page/add_banner';
+$route['admin/banners/delete/(:num)'] = 'Page/delete_banner/$1';
 
 /*Debugging*/
 $route['test'] = 'Test';

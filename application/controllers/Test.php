@@ -5,13 +5,8 @@ class Test extends CI_Controller {
 
 	public function index() {
 
-		$this->load->helper('security');
-
-		$string	= "Prueba (Disco Gratis)";
-		echo sanitize_filename($string);
-
-
-
+    echo cleanString('Psicópata año (2013)');
+		
 	}
 
 

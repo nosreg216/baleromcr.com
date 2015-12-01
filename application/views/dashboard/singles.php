@@ -31,6 +31,12 @@
                 <input type="text" class="form-control" name="song_title" placeholder="Nombre de la canción" required>
               </div>
 
+              <div class="form-group">
+                <label for="textArea">Descripción del sencillo</label>
+                <textarea class="form-control" rows="3" name="song_desc"></textarea>
+                <span class="help-block">Una breve descripción sobre qué trata el sencillo que se mostrará bajo la portada.</span>
+              </div>
+
               <div class="row">
                <div class="col-xs-3">
                   <div class="form-group">
@@ -41,9 +47,9 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_song">Archivo (.mp3)</label>
-                    <input type="file" name="song_file" required>
+                    <input type="file" accept=".mp3" name="song_file" required>
                   </div>
                 </div>
               </div>
@@ -59,7 +65,7 @@
                   </div>
                 </div>
                 <div class="col-xs-9">
-                  <div class="form-group">
+                  <div class="form-group pull-right">
                     <label for="file_cover">Portada (.png)</label>
                     <input type="file" name="file_cover" accept=".png" required>
                   </div>

@@ -13,7 +13,8 @@
             <td><strong>#</strong></td>
             <td><strong>Producto</strong></td>
             <td><strong>Titulo</strong></td>
-            <td class="text-right"><strong>Precio</strong></td>
+            <td><strong>Precio</strong></td>
+            <td class="text-right"><strong>Opciones</strong></td>
             <td>&nbsp;</td>
           </thead>
           <tbody>
@@ -36,7 +37,7 @@
                 echo "<td>". $i."</td>";
                 echo "<td>". $type."</td>";
                 echo "<td>". $items['name']."</td>";
-                echo "<td class='text-right'>".$items['price']."</td>";
+                echo "<td>$ ".$items['price'].".00</td>";
                 echo "<td class='text-right'>". $link ."</td>";
                 echo "</tr>";
                 $i++;
@@ -46,7 +47,7 @@
         </table>
 
         <div class="panel-footer text-right">
-          Total: <strong>USD <?php echo $this->cart->total(); ?></strong>
+          Total: <strong>$ <?php echo $this->cart->total(); ?>.00 USD</strong>
         </div>
       </div>
 
